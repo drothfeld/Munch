@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
+		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
 		B06175D8204CEB2A00462CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* ViewController.swift */; };
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
+		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
 		B06175D2204CEB2A00462CCE /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06175D5204CEB2A00462CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06175D7204CEB2A00462CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B0580E5E204E0F5F00AF67BD /* username_login_icon.png */,
+				B0580E5A204E0D2900AF67BD /* password_login_icon.png */,
 				B0A410D5204CF28D00341042 /* login_background.png */,
 			);
 			path = Images;
@@ -238,9 +244,11 @@
 				B0A410FA204CF3C000341042 /* OFL.txt in Resources */,
 				B0A410FC204CF3C000341042 /* README.txt in Resources */,
 				B0A410D6204CF28D00341042 /* login_background.png in Resources */,
+				B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */,
 				B0A410F1204CF3C000341042 /* Lato-Bold.ttf in Resources */,
 				B0A410F5204CF3C000341042 /* Lato-Regular.ttf in Resources */,
 				B0A410F2204CF3C000341042 /* Lato-Black.ttf in Resources */,
+				B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */,
 				B0A410EF204CF3C000341042 /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
