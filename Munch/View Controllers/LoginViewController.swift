@@ -8,24 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    // UI Elements
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
+    // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        interfaceSetup()
+    }
+    
+    // Configuring ui elements when app loads
+    func interfaceSetup() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        loginButton.imageView?.layer.cornerRadius = 10
     }
     
+    // Hides status bar
     override var prefersStatusBarHidden: Bool{
         return true
     }

@@ -12,7 +12,7 @@
 		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
 		B0580E63204E143000AF67BD /* login_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E62204E143000AF67BD /* login_app_icon.png */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
-		B06175D8204CEB2A00462CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* ViewController.swift */; };
+		B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* LoginViewController.swift */; };
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
 		B06175DD204CEB2A00462CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06175DC204CEB2A00462CCE /* Assets.xcassets */; };
 		B06175E0204CEB2A00462CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175DE204CEB2A00462CCE /* LaunchScreen.storyboard */; };
@@ -46,7 +46,7 @@
 		B0580E62204E143000AF67BD /* login_app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_icon.png; sourceTree = "<group>"; };
 		B06175D2204CEB2A00462CCE /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06175D5204CEB2A00462CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B06175D7204CEB2A00462CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B06175D7204CEB2A00462CCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B06175DA204CEB2A00462CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B06175DC204CEB2A00462CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B06175DF204CEB2A00462CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0580E64204E1B7800AF67BD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B06175D7204CEB2A00462CCE /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B0580E65204E1B8B00AF67BD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B06175D9204CEB2A00462CCE /* Main.storyboard */,
+				B06175DE204CEB2A00462CCE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		B06175C9204CEB2A00462CCE = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +121,10 @@
 		B06175D4204CEB2A00462CCE /* Munch */ = {
 			isa = PBXGroup;
 			children = (
+				B0580E65204E1B8B00AF67BD /* Storyboards */,
+				B0580E64204E1B7800AF67BD /* View Controllers */,
 				B0A410D3204CF27B00341042 /* Assets */,
 				B06175D5204CEB2A00462CCE /* AppDelegate.swift */,
-				B06175D7204CEB2A00462CCE /* ViewController.swift */,
-				B06175D9204CEB2A00462CCE /* Main.storyboard */,
-				B06175DC204CEB2A00462CCE /* Assets.xcassets */,
-				B06175DE204CEB2A00462CCE /* LaunchScreen.storyboard */,
 				B06175E1204CEB2A00462CCE /* Info.plist */,
 			);
 			path = Munch;
@@ -118,6 +133,7 @@
 		B0A410D3204CF27B00341042 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B06175DC204CEB2A00462CCE /* Assets.xcassets */,
 				B0A410D7204CF3AE00341042 /* Fonts */,
 				B0A410D4204CF28100341042 /* Images */,
 			);
@@ -268,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B06175D8204CEB2A00462CCE /* ViewController.swift in Sources */,
+				B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */,
 				B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
