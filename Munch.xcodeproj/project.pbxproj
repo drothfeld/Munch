@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
+		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
+		B0580E63204E143000AF67BD /* login_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E62204E143000AF67BD /* login_app_icon.png */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
 		B06175D8204CEB2A00462CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* ViewController.swift */; };
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
+		B0580E60204E110E00AF67BD /* login_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button_background.png; sourceTree = "<group>"; };
+		B0580E62204E143000AF67BD /* login_app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_icon.png; sourceTree = "<group>"; };
 		B06175D2204CEB2A00462CCE /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06175D5204CEB2A00462CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06175D7204CEB2A00462CCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				B0580E5E204E0F5F00AF67BD /* username_login_icon.png */,
 				B0580E5A204E0D2900AF67BD /* password_login_icon.png */,
 				B0A410D5204CF28D00341042 /* login_background.png */,
+				B0580E60204E110E00AF67BD /* login_button_background.png */,
+				B0580E62204E143000AF67BD /* login_app_icon.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */,
 				B0A410EE204CF3C000341042 /* Lato-Italic.ttf in Resources */,
 				B0A41100204CF3C000341042 /* Lato-ThinItalic.ttf in Resources */,
+				B0580E63204E143000AF67BD /* login_app_icon.png in Resources */,
 				B0A410F8204CF3C000341042 /* Lato-Semibold.ttf in Resources */,
 				B0A410FD204CF3C000341042 /* Lato-BoldItalic.ttf in Resources */,
 				B0A410F6204CF3C000341042 /* Lato-Hairline.ttf in Resources */,
@@ -245,6 +252,7 @@
 				B0A410FC204CF3C000341042 /* README.txt in Resources */,
 				B0A410D6204CF28D00341042 /* login_background.png in Resources */,
 				B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */,
+				B0580E61204E110F00AF67BD /* login_button_background.png in Resources */,
 				B0A410F1204CF3C000341042 /* Lato-Bold.ttf in Resources */,
 				B0A410F5204CF3C000341042 /* Lato-Regular.ttf in Resources */,
 				B0A410F2204CF3C000341042 /* Lato-Black.ttf in Resources */,
