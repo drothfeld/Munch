@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2736B5FDE782474D229D52FF /* Pods_Munch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7146E65128077996D5CE157 /* Pods_Munch.framework */; };
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
 		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
 		B0580E63204E143000AF67BD /* login_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E62204E143000AF67BD /* login_app_icon.png */; };
+		B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0580E66204E20C200AF67BD /* GoogleService-Info.plist */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
 		B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* LoginViewController.swift */; };
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
@@ -40,10 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		849FDCB9F6529C7B18E939C7 /* Pods-Munch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.release.xcconfig"; sourceTree = "<group>"; };
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
 		B0580E60204E110E00AF67BD /* login_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button_background.png; sourceTree = "<group>"; };
 		B0580E62204E143000AF67BD /* login_app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_icon.png; sourceTree = "<group>"; };
+		B0580E66204E20C200AF67BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B06175D2204CEB2A00462CCE /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06175D5204CEB2A00462CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06175D7204CEB2A00462CCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		B0A410EA204CF3C000341042 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		B0A410EB204CF3C000341042 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		B0A410EC204CF3C000341042 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.debug.xcconfig"; sourceTree = "<group>"; };
+		C7146E65128077996D5CE157 /* Pods_Munch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Munch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +85,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2736B5FDE782474D229D52FF /* Pods_Munch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0626F840A184353C4D5F4F5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */,
+				849FDCB9F6529C7B18E939C7 /* Pods-Munch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B0580E64204E1B7800AF67BD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +123,8 @@
 			children = (
 				B06175D4204CEB2A00462CCE /* Munch */,
 				B06175D3204CEB2A00462CCE /* Products */,
+				0626F840A184353C4D5F4F5D /* Pods */,
+				E0E4434E2701CF00DDC2F82B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +144,7 @@
 				B0A410D3204CF27B00341042 /* Assets */,
 				B06175D5204CEB2A00462CCE /* AppDelegate.swift */,
 				B06175E1204CEB2A00462CCE /* Info.plist */,
+				B0580E66204E20C200AF67BD /* GoogleService-Info.plist */,
 			);
 			path = Munch;
 			sourceTree = "<group>";
@@ -187,6 +206,14 @@
 			path = Lato;
 			sourceTree = "<group>";
 		};
+		E0E4434E2701CF00DDC2F82B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7146E65128077996D5CE157 /* Pods_Munch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B06175E4204CEB2A00462CCE /* Build configuration list for PBXNativeTarget "Munch" */;
 			buildPhases = (
+				A63D6EE45273F5893957C8B3 /* [CP] Check Pods Manifest.lock */,
 				B06175CE204CEB2A00462CCE /* Sources */,
 				B06175CF204CEB2A00462CCE /* Frameworks */,
 				B06175D0204CEB2A00462CCE /* Resources */,
+				BA6C4BF9FF4C22F499AF80F8 /* [CP] Embed Pods Frameworks */,
+				60514895894897B083CE0819 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +280,7 @@
 				B0A410FB204CF3C000341042 /* Lato-Heavy.ttf in Resources */,
 				B0A410F0204CF3C000341042 /* Lato-Thin.ttf in Resources */,
 				B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */,
+				B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */,
 				B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */,
 				B0A410F4204CF3C000341042 /* Lato-HairlineItalic.ttf in Resources */,
 				B06175E0204CEB2A00462CCE /* LaunchScreen.storyboard in Resources */,
@@ -278,6 +309,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60514895894897B083CE0819 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Munch/Pods-Munch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A63D6EE45273F5893957C8B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Munch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA6C4BF9FF4C22F499AF80F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Munch/Pods-Munch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Munch/Pods-Munch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B06175CE204CEB2A00462CCE /* Sources */ = {
@@ -420,6 +507,7 @@
 		};
 		B06175E5204CEB2A00462CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +523,7 @@
 		};
 		B06175E6204CEB2A00462CCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849FDCB9F6529C7B18E939C7 /* Pods-Munch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
