@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     // UI Elements
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var errorMessageLabel: UIButton!
     
     // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
+    }
+    
+    // User attempts to log in
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        // Check if the user exists
+        
+        // If the user doesn't exist, check new account requirements and create new user
+//        Auth.auth().createUser(withEmail: usernameTextField.text!, password: passwordTextField.text!) {
+//            (user, error) in
+//            // ...
+//        }
+        
+        // If the user does exist, procede to home page
     }
     
     // Configuring ui elements when app loads

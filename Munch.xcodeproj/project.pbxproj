@@ -13,6 +13,7 @@
 		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
 		B0580E63204E143000AF67BD /* login_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E62204E143000AF67BD /* login_app_icon.png */; };
 		B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0580E66204E20C200AF67BD /* GoogleService-Info.plist */; };
+		B0580E69204F50C400AF67BD /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0580E68204F50C400AF67BD /* NewUserViewController.swift */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
 		B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* LoginViewController.swift */; };
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		B0580E60204E110E00AF67BD /* login_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button_background.png; sourceTree = "<group>"; };
 		B0580E62204E143000AF67BD /* login_app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_icon.png; sourceTree = "<group>"; };
 		B0580E66204E20C200AF67BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0580E68204F50C400AF67BD /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		B06175D2204CEB2A00462CCE /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06175D5204CEB2A00462CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06175D7204CEB2A00462CCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B06175D7204CEB2A00462CCE /* LoginViewController.swift */,
+				B0580E68204F50C400AF67BD /* NewUserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -317,9 +320,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Munch/Pods-Munch-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,11 +357,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Munch/Pods-Munch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -372,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */,
+				B0580E69204F50C400AF67BD /* NewUserViewController.swift in Sources */,
 				B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

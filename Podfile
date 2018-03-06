@@ -7,5 +7,7 @@ target 'Munch' do
 
   # Pods for Munch
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
 end
