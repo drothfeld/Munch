@@ -47,45 +47,55 @@ class LoginViewController: UIViewController {
                 self.errorMessageLabel.text = "That username is already in use"
             }
                 
-            // Validate textfields
+            // Validate username and password fields
             else {
                 // Checking username
                 if (!self.isValidEmail(username: self.usernameTextField.text!)) {
                     self.errorMessageLabel.isHidden = false
-                    self.errorMessageLabel.text = "Invalid username"
+                    self.errorMessageLabel.text = "Invalid username/email"
                 }
                 // Checking password
+                else if (!self.isValidPassword(password: self.passwordTextField.text!)) {
+                    self.errorMessageLabel.isHidden = false
+                    self.errorMessageLabel.text = "Password must contain: uppercase, special char, number"
+                }
+                // All validation passed, create new account
+                else {
+                    Auth.auth().createUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!) {
+                        (user, error) in
+                        // ...
+                    }
+                }
             }
         })
-        
-        
-        
-        
-        
-        
-        if (usernameTextField.text?.isEmpty == false) {
-            
-        }
-        
-        // Create new user with the given username and password
-        Auth.auth().createUser(withEmail: usernameTextField.text!, password: passwordTextField.text!) {
-            (user, error) in
-            // ...
-        }
-        
     }
     
     // Checks if a given string is a valid email address
     func isValidEmail(username: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: username)
     }
     
     // Checks if a given string is a valid password
     func isValidPassword(password: String) -> Bool {
+        // Check if password contains uppercase letter
+        let capitalLetterRegEx  = ".*[A-Z]+.*"
+        let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+        let capitalresult = texttest.evaluate(with: password)
         
+        // Check if password contains number
+        let numberRegEx  = ".*[0-9]+.*"
+        let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        let numberresult = texttest1.evaluate(with: password)
+        
+        // Check if password contains a special character
+        let specialCharacterRegEx  = ".*[!&^%$#@()/]+.*"
+        let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
+        let specialresult = texttest2.evaluate(with: password)
+        
+        // All conditions must be met
+        return (capitalresult && numberresult && specialresult)
     }
     
     // Configuring ui elements when app loads
