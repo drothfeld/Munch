@@ -74,15 +74,27 @@
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upj-kp-bvf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIh-gU-ZwO" userLabel="Create Account Button">
-                                        <rect key="frame" x="86" y="61" width="152" height="30"/>
+                                    <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIh-gU-ZwO" userLabel="Forgot Password Button">
+                                        <rect key="frame" x="105" y="61" width="114" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
-                                        <state key="normal" title="Don't have an account?">
+                                        <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="dKa-Bx-aYg" kind="show" id="uWn-QH-ZmG"/>
+                                            <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qls-Na-RUt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-UK-deH" userLabel="[BETA] Create Account Button">
+                                        <rect key="frame" x="94" y="61" width="136" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                        <state key="normal" title="Create new account?">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createNewAccountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mh0-pC-gpt"/>
+                                            <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ee-ij-n0L"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -139,19 +151,18 @@
                                     </view>
                                 </subviews>
                             </view>
-                            <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-be-ccd" userLabel="Login Error Label">
-                                <rect key="frame" x="25" y="469" width="325" height="20"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAe-PK-VWG" userLabel="Login Error Label">
+                                <rect key="frame" x="25" y="469" width="325" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="Error">
-                                    <color key="titleColor" red="0.9175150990486145" green="0.35664391848506832" blue="0.34555565275207478" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
+                                <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="errorMessageLabel" destination="XXp-be-ccd" id="Hxd-l3-4Ue"/>
+                        <outlet property="errorMessageLabel" destination="kAe-PK-VWG" id="r5R-4b-usi"/>
                         <outlet property="loginButton" destination="bT9-Xf-qXp" id="l8x-vV-wA8"/>
                         <outlet property="passwordTextField" destination="Wck-sN-T6j" id="FfG-pG-CjO"/>
                         <outlet property="usernameTextField" destination="GOR-TH-gPd" id="wOQ-Sn-AlX"/>
@@ -159,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="-69"/>
+            <point key="canvasLocation" x="-492" y="-69.715142428785612"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="nMt-a7-f6Q">
