@@ -29,7 +29,19 @@ class LoginViewController: UIViewController {
     
     // User attempts to log in
     @IBAction func loginButtonPressed(_ sender: Any) {
-        //TODO: If the user does exist, continue to home page
+        Auth.auth().signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
+            // Encountered login error
+            if ((error) != nil) {
+                self.errorMessageLabel.isHidden = false
+                self.errorMessageLabel.text = "Incorrect username/password"
+                self.invalidLoginCredentials = true
+            // Successful login
+            } else {
+                self.errorMessageLabel.isHidden = true
+                self.invalidLoginCredentials = false
+                self.performSegue(withIdentifier: "homeLogin", sender: self)
+            }
+        }
     }
     
     // User forgot their password
