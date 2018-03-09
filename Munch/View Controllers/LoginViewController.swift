@@ -101,20 +101,29 @@ class LoginViewController: UIViewController {
         // Check if password contains uppercase letter
         let capitalLetterRegEx  = ".*[A-Z]+.*"
         let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
-        let capitalresult = texttest.evaluate(with: password)
+        let capitalResult = texttest.evaluate(with: password)
         
         // Check if password contains number
         let numberRegEx  = ".*[0-9]+.*"
         let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
-        let numberresult = texttest1.evaluate(with: password)
+        let numberResult = texttest1.evaluate(with: password)
         
         // Check if password contains a special character
         let specialCharacterRegEx  = ".*[!&^%$#@()/]+.*"
         let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
-        let specialresult = texttest2.evaluate(with: password)
+        let specialResult = texttest2.evaluate(with: password)
+        
+        // Check password length
+        let minimumRequiredLength = 6
+        var countResult = false
+        if (password.count < minimumRequiredLength) {
+            countResult = false
+        } else {
+            countResult = true
+        }
         
         // All conditions must be met
-        return (capitalresult && numberresult && specialresult)
+        return (capitalResult && numberResult && specialResult && countResult)
     }
     
     // Configuring ui elements when app loads
