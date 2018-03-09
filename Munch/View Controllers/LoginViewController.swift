@@ -11,6 +11,9 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class LoginViewController: UIViewController {
+    // Controller Variables
+    var invalidLoginCredentials: Bool = true
+    
     // UI Elements
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -26,7 +29,7 @@ class LoginViewController: UIViewController {
     
     // User attempts to log in
     @IBAction func loginButtonPressed(_ sender: Any) {
-        // If the user does exist, procede to home page
+        //TODO: If the user does exist, continue to home page
     }
     
     // User forgot their password
@@ -43,31 +46,47 @@ class LoginViewController: UIViewController {
             
             // User already exists
             if snapshot.hasChild(Auth.auth().currentUser!.uid) {
+                // TODO: IS NOT PROPERLY WORKING
                 self.errorMessageLabel.isHidden = false
                 self.errorMessageLabel.text = "That username is already in use"
+                self.invalidLoginCredentials = true
             }
-                
+            
             // Validate username and password fields
             else {
                 // Checking username
                 if (!self.isValidEmail(username: self.usernameTextField.text!)) {
                     self.errorMessageLabel.isHidden = false
                     self.errorMessageLabel.text = "Invalid username/email"
+                    self.invalidLoginCredentials = true
                 }
                 // Checking password
                 else if (!self.isValidPassword(password: self.passwordTextField.text!)) {
                     self.errorMessageLabel.isHidden = false
-                    self.errorMessageLabel.text = "Password must contain: uppercase, special char, number"
+                    self.errorMessageLabel.text = "Invalid password"
+                    self.invalidLoginCredentials = true
                 }
                 // All validation passed, create new account
                 else {
+                    self.errorMessageLabel.isHidden = true
+                    self.invalidLoginCredentials = false
                     Auth.auth().createUser(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!) {
                         (user, error) in
                         // ...
                     }
+                    self.performSegue(withIdentifier: "homeLogin", sender: self)
                 }
             }
         })
+    }
+    
+    // Checks whether segue should be preformed based on login info
+    func shouldPerformSegueWithIdentifier(_ identifier: String!, sender: AnyObject!) -> Bool {
+        NSLog("test")
+        if (self.invalidLoginCredentials) {
+            return false
+        }
+        return true
     }
     
     // Checks if a given string is a valid email address
