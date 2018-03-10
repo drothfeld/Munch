@@ -192,6 +192,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IGw-v5-FcR"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="a3f-4T-Meb" id="ayu-u3-mBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DM3-uo-XGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

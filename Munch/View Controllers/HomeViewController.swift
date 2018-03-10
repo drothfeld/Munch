@@ -8,8 +8,14 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
+    // Controller Elements
+    var truncatedUserEmail: String!
+    
+    // UI Elements
+    @IBOutlet weak var testLabel: UILabel!
     
     // Onload
     override func viewDidLoad() {
@@ -20,6 +26,25 @@ class HomeViewController: UIViewController {
     
     // Configuring ui elements when app loads
     func interfaceSetup() {
+        // Getting info of the currently logged in user
+        let user = Auth.auth().currentUser
+        if let user = user {
+            truncatedUserEmail = stripDotCom(username: user.email!)
+            let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
+            userFoodStockRef.observe(.value, with: { snapshot in
+                print(snapshot.value)
+            })
+            testLabel.text = truncatedUserEmail // TEST
+        }
+    }
+    
+    // Strip the ".com" from a string
+    func stripDotCom(username: String) -> String {
+        var truncated = username
+        for _ in 1...4 {
+           truncated.remove(at: truncated.index(before: truncated.endIndex))
+        }
+        return truncated
     }
     
     // Hides status bar
