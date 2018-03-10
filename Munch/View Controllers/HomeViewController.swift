@@ -13,6 +13,7 @@ import FirebaseDatabase
 class HomeViewController: UIViewController {
     // Controller Elements
     var truncatedUserEmail: String!
+    var foodItems: [FoodItem] = []
     
     // UI Elements
     @IBOutlet weak var testLabel: UILabel!
@@ -35,11 +36,14 @@ class HomeViewController: UIViewController {
             // Getting user-food-stock JSON object
             let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
             userFoodStockRef.observe(.value, with: { snapshot in
-                print(snapshot.value)
+                //print(snapshot.value)
                 // Parsing JSON data
-                
+                for item in snapshot.children {
+                    let foodItem = FoodItem(snapshot: item as! DataSnapshot)
+                    self.foodItems.append(foodItem)
+                }
+                self.testLabel.text = self.foodItems[1].name
             })
-            testLabel.text = truncatedUserEmail // TEST
         }
     }
     
