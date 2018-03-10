@@ -20,6 +20,7 @@
 		B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175D9204CEB2A00462CCE /* Main.storyboard */; };
 		B06175DD204CEB2A00462CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06175DC204CEB2A00462CCE /* Assets.xcassets */; };
 		B06175E0204CEB2A00462CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175DE204CEB2A00462CCE /* LaunchScreen.storyboard */; };
+		B08AFABB2054597B00B7DF2F /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AFABA2054597B00B7DF2F /* FoodItem.swift */; };
 		B0A410D6204CF28D00341042 /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A410D5204CF28D00341042 /* login_background.png */; };
 		B0A410ED204CF3C000341042 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410D9204CF3C000341042 /* Lato-HeavyItalic.ttf */; };
 		B0A410EE204CF3C000341042 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410DA204CF3C000341042 /* Lato-Italic.ttf */; };
@@ -59,6 +60,7 @@
 		B06175DC204CEB2A00462CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B06175DF204CEB2A00462CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B06175E1204CEB2A00462CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08AFABA2054597B00B7DF2F /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		B0A410D5204CF28D00341042 /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
 		B0A410D9204CF3C000341042 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		B0A410DA204CF3C000341042 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		B06175D4204CEB2A00462CCE /* Munch */ = {
 			isa = PBXGroup;
 			children = (
+				B08AFAB92054596300B7DF2F /* Classes */,
 				B0580E65204E1B8B00AF67BD /* Storyboards */,
 				B0580E64204E1B7800AF67BD /* View Controllers */,
 				B0A410D3204CF27B00341042 /* Assets */,
@@ -153,6 +156,14 @@
 				B0580E66204E20C200AF67BD /* GoogleService-Info.plist */,
 			);
 			path = Munch;
+			sourceTree = "<group>";
+		};
+		B08AFAB92054596300B7DF2F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B08AFABA2054597B00B7DF2F /* FoodItem.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B0A410D3204CF27B00341042 /* Assets */ = {
@@ -390,6 +401,7 @@
 				B0580E69204F50C400AF67BD /* NewUserViewController.swift in Sources */,
 				B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */,
 				B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */,
+				B08AFABB2054597B00B7DF2F /* FoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

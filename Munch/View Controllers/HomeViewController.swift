@@ -26,13 +26,18 @@ class HomeViewController: UIViewController {
     
     // Configuring ui elements when app loads
     func interfaceSetup() {
+        
         // Getting info of the currently logged in user
         let user = Auth.auth().currentUser
         if let user = user {
             truncatedUserEmail = stripDotCom(username: user.email!)
+            
+            // Getting user-food-stock JSON object
             let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
             userFoodStockRef.observe(.value, with: { snapshot in
                 print(snapshot.value)
+                // Parsing JSON data
+                
             })
             testLabel.text = truncatedUserEmail // TEST
         }
