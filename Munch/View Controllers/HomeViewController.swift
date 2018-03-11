@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
-        pieChartSetup()
     }
     
     // Configuring ui elements when app loads
@@ -46,16 +45,28 @@ class HomeViewController: UIViewController {
                     let foodItem = FoodItem(snapshot: item as! DataSnapshot)
                     self.foodItems.append(foodItem)
                 }
+                // Setting up pieChart
+                let foodCategories = ["Meat", "Seafood", "Dairy", "Fruit", "Vegetable", "Starch", "Grain", "Spice", "Fat"]
+                var foodCategoriesCount = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                // Getting count of each food type
+                for i in 0..<self.foodItems.count {
+                    switch (self.foodItems[i].type) {
+                        case ("Meat"): foodCategoriesCount[0] += 1.0
+                        case ("Seafood"): foodCategoriesCount[1] += 1.0
+                        case ("Dairy"): foodCategoriesCount[2] += 1.0
+                        case ("Fruit"): foodCategoriesCount[3] += 1.0
+                        case ("Vegetable"): foodCategoriesCount[4] += 1.0
+                        case ("Starch"): foodCategoriesCount[5] += 1.0
+                        case ("Grain"): foodCategoriesCount[6] += 1.0
+                        case ("Spice"): foodCategoriesCount[7] += 1.0
+                        case ("Fat"): foodCategoriesCount[8] += 1.0
+                        default: print(self.foodItems[i])
+                    }
+                }
+                // Creating pieChart
+                self.setChart(dataPoints: foodCategories, values: foodCategoriesCount)
             })
         }
-    }
-    
-    // Loading pie chart to display food user's food stock
-    func pieChartSetup() {
-        //EXAMPLE DATA
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-        setChart(dataPoints: months, values: unitsSold)
     }
     
     // Setting pie chart values
@@ -76,7 +87,7 @@ class HomeViewController: UIViewController {
                 dataEntries.append(dataEntry)
             }
         }
-        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
+        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Food Categories")
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         FoodPieChart.data = pieChartData
         
