@@ -1,0 +1,3 @@
+# If decide to remove pods from repo:
+#   git rm -r Pods/
+#   Add: "Pods/" to .gitignore
