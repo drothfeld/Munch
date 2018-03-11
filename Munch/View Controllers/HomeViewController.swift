@@ -84,7 +84,9 @@ class HomeViewController: UIViewController {
         for i in 0..<dataPoints.count {
             // Only graphing food categories with at least 2% of the total storage
             if (foodCountPercentages[i] > percentageThreshold) {
-                let dataEntry = ChartDataEntry(x: Double(i), y: foodCountPercentages[i])
+                let dataEntry = PieChartDataEntry()
+                dataEntry.y = foodCountPercentages[i]
+                dataEntry.label = dataPoints[i]
                 dataEntries.append(dataEntry)
             }
         }
@@ -97,6 +99,7 @@ class HomeViewController: UIViewController {
         formatter.numberStyle = .percent
         formatter.maximumFractionDigits = 100
         formatter.multiplier = 1.0
+        //FoodPieChart.centerText = "Food Stock"
         FoodPieChart.data?.setValueFont(UIFont(name: "Lato-Regular", size: 20.0)!)
         pieChartData.setValueFormatter(DefaultValueFormatter(formatter:formatter))
         
@@ -135,7 +138,7 @@ class HomeViewController: UIViewController {
         pieChartDataSet.colors = colors
         
         // Changing key attributes and animation
-        FoodPieChart.drawEntryLabelsEnabled = false
+        FoodPieChart.drawEntryLabelsEnabled = true
         FoodPieChart.chartDescription?.enabled = false
         FoodPieChart.holeColor = UIColor.clear
         FoodPieChart.legend.enabled = false
