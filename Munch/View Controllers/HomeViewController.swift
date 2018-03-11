@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
                 // Setting up pieChart
                 let foodCategories = ["Meat", "Seafood", "Dairy", "Fruit", "Vegetable", "Starch", "Grain", "Spice", "Fat"]
                 var foodCategoriesCount = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                let totalFoodCount = self.foodItems.count
                 // Getting count of each food type
                 for i in 0..<self.foodItems.count {
                     switch (self.foodItems[i].type) {
@@ -64,13 +65,13 @@ class HomeViewController: UIViewController {
                     }
                 }
                 // Creating pieChart
-                self.setChart(dataPoints: foodCategories, values: foodCategoriesCount)
+                self.setChart(dataPoints: foodCategories, values: foodCategoriesCount, total: totalFoodCount)
             })
         }
     }
     
     // Setting pie chart values
-    func setChart(dataPoints: [String], values: [Double]) {
+    func setChart(dataPoints: [String], values: [Double], total: Int) {
         
         // Getting percentages of food available for each category
         var totalFoodCount: Double = 0.00
@@ -102,13 +103,34 @@ class HomeViewController: UIViewController {
         // Setting pie chart colors
         FoodPieChart.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         var colors: [UIColor] = []
-        for i in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
+        var color: UIColor
+        for i in 0..<total {
+            if (foodCountPercentages[i] > percentageThreshold) {
+                switch (i) {
+                    // Meat
+                    case (0): color = UIColor(red: 0.5882, green: 0, blue: 0.0078, alpha: 1.0)
+                    // Seafood
+                    case (1): color = UIColor(red: 0, green: 0.3176, blue: 0.8667, alpha: 1.0)
+                    // Dairy
+                    case (2): color = UIColor(red: 0.6588, green: 0.6157, blue: 0, alpha: 1.0)
+                    // Fruit
+                    case (3): color = UIColor(red: 0.6588, green: 0.4667, blue: 0.8078, alpha: 1.0)
+                    // Vegetable
+                    case (4): color = UIColor(red: 0, green: 0.6667, blue: 0.3216, alpha: 1.0)
+                    // Starch
+                    case (5): color = UIColor(red: 0.8275, green: 0.5255, blue: 0, alpha: 1.0)
+                    // Grain
+                    case (6): color = UIColor(red: 0.5686, green: 0.3765, blue: 0.1451, alpha: 1.0)
+                    // Spice
+                    case (7): color = UIColor(red: 0.9098, green: 0.4, blue: 0.1059, alpha: 1.0)
+                    // Fat
+                    case (8): color = UIColor(red: 0.2431, green: 0.8196, blue: 0.7882, alpha: 1.0)
+                    // None of the above (shouldn't ever happen)
+                    default: color = UIColor.black
+                }
+                // Set colors
+                colors.append(color)
+            }
         }
         pieChartDataSet.colors = colors
         
