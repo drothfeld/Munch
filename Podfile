@@ -10,5 +10,7 @@ target 'Munch' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'Firebase/Database'
+  pod 'Charts'
+  pod 'ChartsRealm'
 
 end

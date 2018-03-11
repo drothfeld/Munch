@@ -1,4 +1,10 @@
 PODS:
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - ChartsRealm (3.0.4):
+    - Charts (= 3.0.4)
+    - RealmSwift (~> 2.10)
   - Firebase/Auth (4.8.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.1)
@@ -53,14 +59,23 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - RealmSwift (2.10.2):
+    - Realm (= 2.10.2)
 
 DEPENDENCIES:
+  - Charts
+  - ChartsRealm
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - GoogleSignIn
 
 SPEC CHECKSUMS:
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  ChartsRealm: 3cf7c9ebf9c6312efbf418cf1da91d72d5416b26
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
@@ -73,7 +88,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
 
-PODFILE CHECKSUM: eef57aebd8b7f13b11a26851bfb2f368edac9d4c
+PODFILE CHECKSUM: 9f7020c88cef8c6b8a753e31eae374751ee8c369
 
 COCOAPODS: 1.3.1
