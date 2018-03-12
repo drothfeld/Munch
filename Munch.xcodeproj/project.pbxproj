@@ -11,6 +11,7 @@
 		B0272A472055DFB6003D662C /* cooking-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A452055DFB6003D662C /* cooking-button.png */; };
 		B0272A482055DFB6003D662C /* pantry-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A462055DFB6003D662C /* pantry-button.png */; };
 		B0272A4A20564540003D662C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0272A4920564540003D662C /* UserProfile.swift */; };
+		B0272A4C2056EFC7003D662C /* profile-login-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A4B2056EFC7003D662C /* profile-login-icon.png */; };
 		B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E97BA205221850000AB47 /* HomeViewController.swift */; };
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
@@ -52,6 +53,7 @@
 		B0272A452055DFB6003D662C /* cooking-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cooking-button.png"; sourceTree = "<group>"; };
 		B0272A462055DFB6003D662C /* pantry-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pantry-button.png"; sourceTree = "<group>"; };
 		B0272A4920564540003D662C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		B0272A4B2056EFC7003D662C /* profile-login-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-login-icon.png"; sourceTree = "<group>"; };
 		B02E97BA205221850000AB47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				B0272A462055DFB6003D662C /* pantry-button.png */,
 				B0580E5E204E0F5F00AF67BD /* username_login_icon.png */,
 				B0580E5A204E0D2900AF67BD /* password_login_icon.png */,
+				B0272A4B2056EFC7003D662C /* profile-login-icon.png */,
 				B0A410D5204CF28D00341042 /* login_background.png */,
 				B0580E60204E110E00AF67BD /* login_button_background.png */,
 				B0580E62204E143000AF67BD /* login_app_icon.png */,
@@ -324,6 +327,7 @@
 				B0A410FD204CF3C000341042 /* Lato-BoldItalic.ttf in Resources */,
 				B0A410F6204CF3C000341042 /* Lato-Hairline.ttf in Resources */,
 				B0A410FA204CF3C000341042 /* OFL.txt in Resources */,
+				B0272A4C2056EFC7003D662C /* profile-login-icon.png in Resources */,
 				B0A410FC204CF3C000341042 /* README.txt in Resources */,
 				B0A410D6204CF28D00341042 /* login_background.png in Resources */,
 				B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */,

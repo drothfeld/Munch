@@ -74,7 +74,7 @@
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upj-kp-bvf"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIh-gU-ZwO" userLabel="Forgot Password Button">
+                                    <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIh-gU-ZwO" userLabel="TODO: Forgot Password Button">
                                         <rect key="frame" x="105" y="61" width="114" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
@@ -85,7 +85,7 @@
                                             <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qls-Na-RUt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-UK-deH" userLabel="[BETA] Create Account Button">
+                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-UK-deH" userLabel="Create Account Button">
                                         <rect key="frame" x="94" y="61" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
@@ -93,8 +93,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="createNewAccountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mh0-pC-gpt"/>
-                                            <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ee-ij-n0L"/>
+                                            <segue destination="dKa-Bx-aYg" kind="showDetail" id="GFJ-Wn-3sM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -292,11 +291,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMI-9R-E7l" userLabel="New User Fields">
-                                <rect key="frame" x="25" y="238" width="325" height="190"/>
+                                <rect key="frame" x="25" y="20" width="325" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-JS-XGR" userLabel="Username New Field">
-                                        <rect key="frame" x="0.0" y="72" width="325" height="45"/>
+                                        <rect key="frame" x="0.0" y="8" width="325" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-NJ-ucg" userLabel="Username Text Line">
@@ -319,7 +318,7 @@
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-Zl-ErC" userLabel="Password New Field">
-                                        <rect key="frame" x="0.0" y="141" width="325" height="45"/>
+                                        <rect key="frame" x="0.0" y="77" width="325" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkV-yx-UKV" userLabel="Password Text Line">
@@ -336,6 +335,52 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password_login_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-wx-k9m" userLabel="Password Icon Image">
+                                                <rect key="frame" x="2" y="10" width="24" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-v8-OFh" userLabel="Firstname New Field">
+                                        <rect key="frame" x="0.0" y="146" width="325" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-AS-nhi" userLabel="Firstname Text Line">
+                                                <rect key="frame" x="7" y="50" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-d8-k0M" userLabel="Firstname Text Field">
+                                                <rect key="frame" x="33" y="0.0" width="281" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-login-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="azB-e2-oy5" userLabel="Firstname Icon Image">
+                                                <rect key="frame" x="2" y="10" width="24" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPN-RX-8dT" userLabel="Lastname New Field">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-CU-FrK" userLabel="Lastname Text Line">
+                                                <rect key="frame" x="7" y="50" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rso-Ld-xor" userLabel="Lastname Text Field">
+                                                <rect key="frame" x="33" y="0.0" width="281" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-login-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="9u0-M5-aS0" userLabel="Lastname Icon Image">
                                                 <rect key="frame" x="2" y="10" width="24" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -365,6 +410,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="createAccountButtonPressed:" destination="dKa-Bx-aYg" eventType="touchUpInside" id="Map-Zq-JUd"/>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoW-ra-B0T"/>
                                         </connections>
                                     </button>
@@ -376,25 +422,26 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="ChT-UU-5qp"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backToLogIn" id="ChT-UU-5qp"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </view>
-                            <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-Ap-bjG" userLabel="Login Error Label">
-                                <rect key="frame" x="25" y="469" width="325" height="20"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agf-3A-ikx" userLabel="Create Account Error Label">
+                                <rect key="frame" x="25" y="469" width="325" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <state key="normal" title="Error">
-                                    <color key="titleColor" red="0.91751509899999995" green="0.35664391849999999" blue="0.3455556528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
+                                <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ncS-aX-W0k"/>
                     </view>
                     <connections>
-                        <outlet property="errorMessageLabel" destination="pfO-Ap-bjG" id="vQ8-jC-aq3"/>
+                        <outlet property="errorMessageLabel" destination="agf-3A-ikx" id="n7j-Fr-Zur"/>
+                        <outlet property="firstNameTextField" destination="xwY-d8-k0M" id="rrl-hk-Kxr"/>
+                        <outlet property="lastNameTextField" destination="rso-Ld-xor" id="n1c-Du-KT8"/>
                         <outlet property="newUserButton" destination="3lB-lk-4nx" id="E5a-GO-Gtf"/>
                         <outlet property="passwordTextField" destination="kLb-lh-Uv4" id="KC7-1W-Pp8"/>
                         <outlet property="usernameTextField" destination="WQe-Qo-Lx1" id="aCm-qI-1o2"/>
@@ -411,9 +458,10 @@
         <image name="login_button_background.png" width="300" height="100"/>
         <image name="pantry-button.png" width="184" height="184"/>
         <image name="password_login_icon.png" width="264" height="265"/>
+        <image name="profile-login-icon.png" width="1187" height="1187"/>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yg8-ZU-M2m"/>
+        <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
 </document>
