@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     var foodItems: [FoodItem] = []
     let percentageThreshold: Double = 1.00
     var currentUser: UserProfile!
+    var hasFood: Bool = true
     
     // UI Elements
     @IBOutlet weak var FoodPieChart: PieChartView!
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var KitchenButtonLabel: UILabel!
     @IBOutlet weak var PantryButtonLabel: UILabel!
     @IBOutlet weak var WelcomeLabel: UILabel!
+    @IBOutlet weak var NoFoodLabel: UILabel!
     
     // Onload
     override func viewDidLoad() {
@@ -72,6 +74,7 @@ class HomeViewController: UIViewController {
                 let foodCategories = ["Meat", "Seafood", "Dairy", "Fruit", "Vegetable", "Starch", "Grain", "Spice", "Fat"]
                 var foodCategoriesCount = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
                 let totalFoodCount = self.foodItems.count
+                if (totalFoodCount == 0) { self.hasFood = false}
                 // Getting count of each food type
                 for i in 0..<self.foodItems.count {
                     switch (self.foodItems[i].type) {
@@ -102,6 +105,10 @@ class HomeViewController: UIViewController {
             self.KitchenButtonLabel.center = CGPoint(x: 78.0, y: 210.5)
             self.PantryButtonLabel.center = CGPoint(x: 284.0, y: 210.5)
             self.WelcomeLabel.alpha = 1.0
+            if (!self.hasFood) {
+                self.NoFoodLabel.isHidden = false
+                self.NoFoodLabel.alpha = 1.0
+            }
         })
     }
     

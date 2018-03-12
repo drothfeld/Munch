@@ -183,6 +183,17 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWe-qW-me7" userLabel="Food Available Chart View" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRS-le-D5c" userLabel="No Food Label">
+                                        <rect key="frame" x="17" y="285" width="340" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">You have no food!
+Go to your pantry to add some.</string>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="25"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4b-ax-nC6" userLabel="User Button Choices View">
@@ -272,6 +283,7 @@
                         <outlet property="KitchenButton" destination="Jsa-ag-5vr" id="ipZ-fN-NG9"/>
                         <outlet property="KitchenButtonLabel" destination="Ag2-LT-Tk0" id="pCG-le-ET3"/>
                         <outlet property="LogOutButton" destination="dNb-oH-mwm" id="09M-8G-Kjo"/>
+                        <outlet property="NoFoodLabel" destination="PRS-le-D5c" id="xnU-Ro-SQQ"/>
                         <outlet property="PantryButton" destination="Fcy-EL-aX7" id="1EX-xf-kPr"/>
                         <outlet property="PantryButtonLabel" destination="FEG-zO-f5A" id="4p6-SX-bxe"/>
                         <outlet property="WelcomeLabel" destination="0lB-RC-Bok" id="V8l-io-DgY"/>
@@ -462,6 +474,6 @@
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ChT-UU-5qp"/>
+        <segue reference="Yg8-ZU-M2m"/>
     </inferredMetricsTieBreakers>
 </document>
