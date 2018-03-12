@@ -82,8 +82,13 @@ class NewUserViewController: UIViewController {
                         (user, error) in
                         // ...
                     }
-                    // Create new JSON user endpoints
-                    
+                    // Create new JSON user endpoint
+                    let profileRef = Database.database().reference(withPath: "user-profile/")
+                    let newUserProfile = UserProfile(firstname: self.firstNameTextField.text!, lastname: self.lastNameTextField.text!)
+                    let newUserProfileRef = profileRef.child(self.stripDotCom(username: self.usernameTextField.text!))
+                    newUserProfileRef.setValue("name")
+                    let newProfileNameRef = Database.database().reference(withPath: "user-profile/" + self.stripDotCom(username: self.usernameTextField.text!) + "/name")
+                    newProfileNameRef.setValue(newUserProfile.toAnyObject())
                     
                     // If everything went smoothly, take the user back to the login screen
                     self.performSegue(withIdentifier: "backToLogIn", sender: self)
@@ -146,6 +151,15 @@ class NewUserViewController: UIViewController {
             return false
         }
         return true
+    }
+    
+    // Strip the ".com" from a string
+    func stripDotCom(username: String) -> String {
+        var truncated = username
+        for _ in 1...4 {
+            truncated.remove(at: truncated.index(before: truncated.endIndex))
+        }
+        return truncated
     }
     
     // Hides status bar
