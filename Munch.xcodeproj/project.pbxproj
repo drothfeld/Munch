@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2736B5FDE782474D229D52FF /* Pods_Munch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7146E65128077996D5CE157 /* Pods_Munch.framework */; };
+		B0272A472055DFB6003D662C /* cooking-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A452055DFB6003D662C /* cooking-button.png */; };
+		B0272A482055DFB6003D662C /* pantry-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A462055DFB6003D662C /* pantry-button.png */; };
 		B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E97BA205221850000AB47 /* HomeViewController.swift */; };
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		849FDCB9F6529C7B18E939C7 /* Pods-Munch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.release.xcconfig"; sourceTree = "<group>"; };
+		B0272A452055DFB6003D662C /* cooking-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cooking-button.png"; sourceTree = "<group>"; };
+		B0272A462055DFB6003D662C /* pantry-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pantry-button.png"; sourceTree = "<group>"; };
 		B02E97BA205221850000AB47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B0272A452055DFB6003D662C /* cooking-button.png */,
+				B0272A462055DFB6003D662C /* pantry-button.png */,
 				B0580E5E204E0F5F00AF67BD /* username_login_icon.png */,
 				B0580E5A204E0D2900AF67BD /* password_login_icon.png */,
 				B0A410D5204CF28D00341042 /* login_background.png */,
@@ -299,6 +305,7 @@
 				B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */,
 				B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */,
 				B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */,
+				B0272A472055DFB6003D662C /* cooking-button.png in Resources */,
 				B0A410F4204CF3C000341042 /* Lato-HairlineItalic.ttf in Resources */,
 				B06175E0204CEB2A00462CCE /* LaunchScreen.storyboard in Resources */,
 				B0A410F3204CF3C000341042 /* Lato-SemiboldItalic.ttf in Resources */,
@@ -306,6 +313,7 @@
 				B06175DD204CEB2A00462CCE /* Assets.xcassets in Resources */,
 				B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */,
 				B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */,
+				B0272A482055DFB6003D662C /* pantry-button.png in Resources */,
 				B0A410EE204CF3C000341042 /* Lato-Italic.ttf in Resources */,
 				B0A41100204CF3C000341042 /* Lato-ThinItalic.ttf in Resources */,
 				B0580E63204E143000AF67BD /* login_app_icon.png in Resources */,

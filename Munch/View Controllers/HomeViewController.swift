@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
     
     // UI Elements
     @IBOutlet weak var FoodPieChart: PieChartView!
+    @IBOutlet weak var KitchenButton: UIButton!
+    @IBOutlet weak var PantryButton: UIButton!
+    @IBOutlet weak var LogOutButton: UIButton!
+    @IBOutlet weak var KitchenButtonLabel: UILabel!
+    @IBOutlet weak var PantryButtonLabel: UILabel!
     
     // Onload
     override func viewDidLoad() {
@@ -27,9 +32,13 @@ class HomeViewController: UIViewController {
         interfaceSetup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        playButtonAnimations()
+    }
+    
     // Configuring ui elements when app loads
     func interfaceSetup() {
-        // Setting background color
+        // Setting UI element properties
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         
         // Getting info of the currently logged in user
@@ -38,6 +47,7 @@ class HomeViewController: UIViewController {
             truncatedUserEmail = stripDotCom(username: user.email!)
             
             // Getting user-food-stock JSON object
+            
             let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
             userFoodStockRef.observe(.value, with: { snapshot in
                 // Parsing JSON data
@@ -68,6 +78,17 @@ class HomeViewController: UIViewController {
                 self.setChart(dataPoints: foodCategories, values: foodCategoriesCount, total: totalFoodCount)
             })
         }
+    }
+    
+    // Animation for buttons on load
+    func playButtonAnimations() {
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in
+            self.KitchenButton.center = CGPoint(x: 78.5, y: 142.0)
+            self.PantryButton.center = CGPoint(x: 284.0, y: 146.0)
+            self.LogOutButton.center = CGPoint(x: 187.0, y: 261.0)
+            self.KitchenButtonLabel.center = CGPoint(x: 78.0, y: 210.5)
+            self.PantryButtonLabel.center = CGPoint(x: 284.0, y: 210.5)
+        })
     }
     
     // Setting pie chart values
