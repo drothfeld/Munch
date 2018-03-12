@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     var truncatedUserEmail: String!
     var foodItems: [FoodItem] = []
     let percentageThreshold: Double = 1.00
+    var currentUser: UserProfile!
     
     // UI Elements
     @IBOutlet weak var FoodPieChart: PieChartView!
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var LogOutButton: UIButton!
     @IBOutlet weak var KitchenButtonLabel: UILabel!
     @IBOutlet weak var PantryButtonLabel: UILabel!
+    @IBOutlet weak var WelcomeLabel: UILabel!
     
     // Onload
     override func viewDidLoad() {
@@ -46,8 +48,19 @@ class HomeViewController: UIViewController {
         if let user = user {
             truncatedUserEmail = stripDotCom(username: user.email!)
             
-            // Getting user-food-stock JSON object
+            // Getting user-profile JSON object
+            let userProfileRef = Database.database().reference(withPath: "user-profile/" + truncatedUserEmail)
+            userProfileRef.observe(.value, with: { snapshot in
+                // Parsing JSON data
+                for item in snapshot.children {
+                    let userProfile = UserProfile(snapshot: item as! DataSnapshot)
+                    self.currentUser = userProfile
+                }
+                self.WelcomeLabel.text = (self.currentUser.firstname + " " + self.currentUser.lastname)
+                
+            })
             
+            // Getting user-food-stock JSON object
             let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
             userFoodStockRef.observe(.value, with: { snapshot in
                 // Parsing JSON data
@@ -82,12 +95,13 @@ class HomeViewController: UIViewController {
     
     // Animation for buttons on load
     func playButtonAnimations() {
-        UIView.animate(withDuration: 1.5, animations: { () -> Void in
+        UIView.animate(withDuration: 1.75, animations: { () -> Void in
             self.KitchenButton.center = CGPoint(x: 78.5, y: 142.0)
             self.PantryButton.center = CGPoint(x: 284.0, y: 146.0)
             self.LogOutButton.center = CGPoint(x: 187.0, y: 261.0)
             self.KitchenButtonLabel.center = CGPoint(x: 78.0, y: 210.5)
             self.PantryButtonLabel.center = CGPoint(x: 284.0, y: 210.5)
+            self.WelcomeLabel.alpha = 1.0
         })
     }
     
@@ -165,7 +179,12 @@ class HomeViewController: UIViewController {
         FoodPieChart.legend.enabled = false
         FoodPieChart.isUserInteractionEnabled = true
         FoodPieChart.animate(xAxisDuration: 2.5, yAxisDuration: 2.5, easingOption: ChartEasingOption.easeInOutQuart)
-
+    }
+    
+    // Log user out
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.performSegue(withIdentifier: "logOut", sender: self)
     }
     
     // Strip the ".com" from a string
