@@ -49,6 +49,7 @@
 		B0B13A9D20582DF60013C38B /* PantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13A9C20582DF60013C38B /* PantryViewController.swift */; };
 		B0B13AA020582E930013C38B /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13A9F20582E930013C38B /* SegueFromLeft.swift */; };
 		B0B13AA220582EB00013C38B /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13AA120582EB00013C38B /* SegueFromRight.swift */; };
+		B0B13AA4205832040013C38B /* KitchenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13AA3205832040013C38B /* KitchenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		B0B13A9C20582DF60013C38B /* PantryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryViewController.swift; sourceTree = "<group>"; };
 		B0B13A9F20582E930013C38B /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		B0B13AA120582EB00013C38B /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		B0B13AA3205832040013C38B /* KitchenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenViewController.swift; sourceTree = "<group>"; };
 		BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.debug.xcconfig"; sourceTree = "<group>"; };
 		C7146E65128077996D5CE157 /* Pods_Munch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Munch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				B0580E68204F50C400AF67BD /* NewUserViewController.swift */,
 				B02E97BA205221850000AB47 /* HomeViewController.swift */,
 				B0B13A9C20582DF60013C38B /* PantryViewController.swift */,
+				B0B13AA3205832040013C38B /* KitchenViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				B0272A4A20564540003D662C /* UserProfile.swift in Sources */,
 				B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */,
 				B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */,
+				B0B13AA4205832040013C38B /* KitchenViewController.swift in Sources */,
 				B0B13A9D20582DF60013C38B /* PantryViewController.swift in Sources */,
 				B0B13AA020582E930013C38B /* SegueFromLeft.swift in Sources */,
 				B08AFABB2054597B00B7DF2F /* FoodItem.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PantryViewController.swift
+//  KitchenViewController.swift
 //  Munch
 //
 //  Created by Dylan Rothfeld on 3/13/18.
@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-class PantryViewController: UIViewController {
+class KitchenViewController: UIViewController {
     
     // Onload
     override func viewDidLoad() {
@@ -23,5 +23,5 @@ class PantryViewController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
-
+    
 }
