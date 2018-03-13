@@ -46,6 +46,9 @@
 		B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410EA204CF3C000341042 /* Lato-Light.ttf */; };
 		B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410EB204CF3C000341042 /* Lato-Medium.ttf */; };
 		B0A41100204CF3C000341042 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410EC204CF3C000341042 /* Lato-ThinItalic.ttf */; };
+		B0B13A9D20582DF60013C38B /* PantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13A9C20582DF60013C38B /* PantryViewController.swift */; };
+		B0B13AA020582E930013C38B /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13A9F20582E930013C38B /* SegueFromLeft.swift */; };
+		B0B13AA220582EB00013C38B /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13AA120582EB00013C38B /* SegueFromRight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		B0A410EA204CF3C000341042 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		B0A410EB204CF3C000341042 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		B0A410EC204CF3C000341042 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		B0B13A9C20582DF60013C38B /* PantryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryViewController.swift; sourceTree = "<group>"; };
+		B0B13A9F20582E930013C38B /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		B0B13AA120582EB00013C38B /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.debug.xcconfig"; sourceTree = "<group>"; };
 		C7146E65128077996D5CE157 /* Pods_Munch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Munch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +127,7 @@
 				B06175D7204CEB2A00462CCE /* LoginViewController.swift */,
 				B0580E68204F50C400AF67BD /* NewUserViewController.swift */,
 				B02E97BA205221850000AB47 /* HomeViewController.swift */,
+				B0B13A9C20582DF60013C38B /* PantryViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 		B06175D4204CEB2A00462CCE /* Munch */ = {
 			isa = PBXGroup;
 			children = (
+				B0B13A9E20582E660013C38B /* Segue Animations */,
 				B08AFAB92054596300B7DF2F /* Classes */,
 				B0580E65204E1B8B00AF67BD /* Storyboards */,
 				B0580E64204E1B7800AF67BD /* View Controllers */,
@@ -233,6 +241,15 @@
 				B0A410EC204CF3C000341042 /* Lato-ThinItalic.ttf */,
 			);
 			path = Lato;
+			sourceTree = "<group>";
+		};
+		B0B13A9E20582E660013C38B /* Segue Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B0B13A9F20582E930013C38B /* SegueFromLeft.swift */,
+				B0B13AA120582EB00013C38B /* SegueFromRight.swift */,
+			);
+			path = "Segue Animations";
 			sourceTree = "<group>";
 		};
 		E0E4434E2701CF00DDC2F82B /* Frameworks */ = {
@@ -425,7 +442,10 @@
 				B0272A4A20564540003D662C /* UserProfile.swift in Sources */,
 				B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */,
 				B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */,
+				B0B13A9D20582DF60013C38B /* PantryViewController.swift in Sources */,
+				B0B13AA020582E930013C38B /* SegueFromLeft.swift in Sources */,
 				B08AFABB2054597B00B7DF2F /* FoodItem.swift in Sources */,
+				B0B13AA220582EB00013C38B /* SegueFromRight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

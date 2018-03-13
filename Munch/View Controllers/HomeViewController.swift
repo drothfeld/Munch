@@ -105,9 +105,12 @@ class HomeViewController: UIViewController {
             self.KitchenButtonLabel.center = CGPoint(x: 78.0, y: 210.5)
             self.PantryButtonLabel.center = CGPoint(x: 284.0, y: 210.5)
             self.WelcomeLabel.alpha = 1.0
+            // TODO: Fix bug where the FIRST account with no
+            // food you log in to doesn't display NoFoodLabel.
             if (!self.hasFood) {
                 self.NoFoodLabel.isHidden = false
                 self.NoFoodLabel.alpha = 1.0
+                self.NoFoodLabel.startBlink()
             }
         })
     }
@@ -207,7 +210,17 @@ class HomeViewController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
-    
-    
+}
+
+// UILabel extension to enable blinking animation
+extension UILabel {
+    // Start blinking
+    func startBlink() {
+        UIView.animate(withDuration: 1.0,
+                       delay:0.0,
+                       options:[.allowUserInteraction, .curveEaseInOut, .autoreverse, .repeat],
+                       animations: { self.alpha = 0.10 },
+                       completion: nil)
+    }
 }
 
