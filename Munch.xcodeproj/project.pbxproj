@@ -17,6 +17,7 @@
 		B02689AA205861CD0059179A /* dessert-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02689A2205861CD0059179A /* dessert-icon.png */; };
 		B02689AB205861CD0059179A /* vegetarian-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02689A3205861CD0059179A /* vegetarian-icon.png */; };
 		B02689AD20586CE00059179A /* seafood-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02689AC20586CDF0059179A /* seafood-icon.png */; };
+		B02689AF2058A1470059179A /* cell-selection-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02689AE2058A1460059179A /* cell-selection-icon.png */; };
 		B0272A472055DFB6003D662C /* cooking-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A452055DFB6003D662C /* cooking-button.png */; };
 		B0272A482055DFB6003D662C /* pantry-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A462055DFB6003D662C /* pantry-button.png */; };
 		B0272A4A20564540003D662C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0272A4920564540003D662C /* UserProfile.swift */; };
@@ -74,6 +75,7 @@
 		B02689A2205861CD0059179A /* dessert-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dessert-icon.png"; sourceTree = "<group>"; };
 		B02689A3205861CD0059179A /* vegetarian-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vegetarian-icon.png"; sourceTree = "<group>"; };
 		B02689AC20586CDF0059179A /* seafood-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seafood-icon.png"; sourceTree = "<group>"; };
+		B02689AE2058A1460059179A /* cell-selection-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell-selection-icon.png"; sourceTree = "<group>"; };
 		B0272A452055DFB6003D662C /* cooking-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cooking-button.png"; sourceTree = "<group>"; };
 		B0272A462055DFB6003D662C /* pantry-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pantry-button.png"; sourceTree = "<group>"; };
 		B0272A4920564540003D662C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B02689AE2058A1460059179A /* cell-selection-icon.png */,
 				B02689AC20586CDF0059179A /* seafood-icon.png */,
 				B026899D205861CD0059179A /* breakfast-icon.png */,
 				B02689A2205861CD0059179A /* dessert-icon.png */,
@@ -389,6 +392,7 @@
 				B0A410EE204CF3C000341042 /* Lato-Italic.ttf in Resources */,
 				B0A41100204CF3C000341042 /* Lato-ThinItalic.ttf in Resources */,
 				B0580E63204E143000AF67BD /* login_app_icon.png in Resources */,
+				B02689AF2058A1470059179A /* cell-selection-icon.png in Resources */,
 				B0A410F8204CF3C000341042 /* Lato-Semibold.ttf in Resources */,
 				B02689AA205861CD0059179A /* dessert-icon.png in Resources */,
 				B0A410FD204CF3C000341042 /* Lato-BoldItalic.ttf in Resources */,

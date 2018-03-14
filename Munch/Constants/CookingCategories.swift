@@ -16,7 +16,7 @@ let vegetarian = CookingCategory(name: "VEGETARIAN", color: UIColor(red: 180/255
 let soups = CookingCategory(name: "SOUPS", color: UIColor(red: 157/255, green: 179/255, blue: 240/255, alpha: 1.0), icon: #imageLiteral(resourceName: "soups-icon.png"))
 let sandwiches = CookingCategory(name: "SANDWICHES", color: UIColor(red: 190/255, green: 132/255, blue: 214/255, alpha: 1.0), icon: #imageLiteral(resourceName: "sandwhiches-icon.png"))
 let dessert = CookingCategory(name: "DESSERT", color: UIColor(red: 118/255, green: 220/255, blue: 165/255, alpha: 1.0), icon: #imageLiteral(resourceName: "dessert-icon.png"))
-let poultry = CookingCategory(name: "POULTRY", color: UIColor.gray, icon: #imageLiteral(resourceName: "poultry-icon.png"))
-let breakfast = CookingCategory(name: "BREAKFAST", color: UIColor.gray, icon: #imageLiteral(resourceName: "breakfast-icon.png"))
+let poultry = CookingCategory(name: "POULTRY", color: UIColor(red: 173/255, green: 173/255, blue: 173/255, alpha: 1.0), icon: #imageLiteral(resourceName: "poultry-icon.png"))
+let breakfast = CookingCategory(name: "BREAKFAST", color: UIColor(red: 229/255, green: 227/255, blue: 100/255, alpha: 1.0), icon: #imageLiteral(resourceName: "breakfast-icon.png"))
 
 let cooking_categories: [CookingCategory] = [drinks, red_meat, seafood, vegetarian, soups, sandwiches, dessert, poultry, breakfast]

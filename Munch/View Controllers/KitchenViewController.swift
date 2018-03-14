@@ -54,6 +54,13 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.detailTextLabel?.text = ""
         cell.imageView?.image = cooking_categories[indexPath.item].icon
         
+        // Changing accessory type attributes
+        cell.tintColor = UIColor.white
+        let image = UIImage(named:"cell-selection-icon.png")?.withRenderingMode(.alwaysTemplate)
+        let checkmark  = UIImageView(frame:CGRect(x:0, y:0, width:((image?.size.width)!/25), height:((image?.size.height)!/25)));
+        checkmark.image = image
+        cell.accessoryView = checkmark
+        
         // Manually changing image size
         let itemSize = CGSize.init(width: 100, height: 100)
         UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale);
