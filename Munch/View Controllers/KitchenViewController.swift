@@ -14,9 +14,11 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // UI Elements
     @IBOutlet weak var KitchenTableView: UITableView!
+    @IBOutlet weak var MenuBarView: UIView!
     
     // Defined Values
     var cookingCategoryList: [CookingCategory] = []
+    let loopCategoryListMultiplier: Int = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
         prepare()
     }
     
+    // Refresh the table
     func prepare() {
         refreshTable()
     }
@@ -32,10 +35,34 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
     func interfaceSetup() {
         // Removing lines between cells
         self.KitchenTableView.separatorStyle = .none
+        self.MenuBarView.center = CGPoint(x: 187.5, y: -25.0)
+    }
+    
+    // Showing and hiding menu bar when user is/isn't scrolling
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if(velocity.y>0) {
+            UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
+                self.MenuBarView.center = CGPoint(x: 187.5, y: -25.0)
+                print("Hide")
+            }, completion: nil)
+            
+        } else {
+            UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
+                self.MenuBarView.center = CGPoint(x: 187.5, y: 25.0)
+                print("Unhide")
+            }, completion: nil)
+        }
     }
     
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // TODO: Creating the illusion of looping the tableview items
+//        for _ in 1...loopCategoryListMultiplier {
+//            for (_, cookingCategory) in cooking_categories.enumerated() {
+//                cookingCategoryList.append(cookingCategory)
+//            }
+//        }
+        
         return cooking_categories.count
     }
     

@@ -527,12 +527,18 @@ Go to your pantry to add some.</string>
                                     <outlet property="delegate" destination="CtB-0A-mtR" id="jFe-gi-vKs"/>
                                 </connections>
                             </tableView>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOP-N9-AGG" userLabel="Menu Bar View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.24685467241721129" green="0.24621680504662419" blue="0.24749253978779839" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lwx-hj-PC8"/>
                     </view>
                     <connections>
                         <outlet property="KitchenTableView" destination="Gao-Gb-ddE" id="An3-JW-Sqx"/>
+                        <outlet property="MenuBarView" destination="jOP-N9-AGG" id="R6f-4Q-fh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DE-fc-e6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
