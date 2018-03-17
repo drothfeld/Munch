@@ -530,6 +530,30 @@ Go to your pantry to add some.</string>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOP-N9-AGG" userLabel="Menu Bar View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KITCHEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXg-C7-lSa" userLabel="Menu Bar Label">
+                                        <rect key="frame" x="130" y="10" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                        <color key="textColor" red="0.99742268041237114" green="0.99484536082474229" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-5M-yHH" userLabel="New Recipe Button">
+                                        <rect key="frame" x="345" y="14" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-IM-leg" userLabel="Back Home Button">
+                                        <rect key="frame" x="8" y="13" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back-home-button.png">
+                                            <color key="titleColor" red="0.99742268041237114" green="0.99484536082474229" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="e9m-Kh-0Ng" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="pHg-9Q-WxV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.24685467241721129" green="0.24621680504662419" blue="0.24749253978779839" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
@@ -547,6 +571,7 @@ Go to your pantry to add some.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="back-home-button.png" width="500" height="500"/>
         <image name="cooking-button.png" width="184" height="184"/>
         <image name="login_app_icon.png" width="512" height="512"/>
         <image name="login_button_background.png" width="300" height="100"/>
@@ -556,6 +581,7 @@ Go to your pantry to add some.</string>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9rk-Tn-J5o"/>
         <segue reference="Yg8-ZU-M2m"/>
     </inferredMetricsTieBreakers>
 </document>

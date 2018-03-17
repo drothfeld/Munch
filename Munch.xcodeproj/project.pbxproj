@@ -22,6 +22,7 @@
 		B0272A482055DFB6003D662C /* pantry-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A462055DFB6003D662C /* pantry-button.png */; };
 		B0272A4A20564540003D662C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0272A4920564540003D662C /* UserProfile.swift */; };
 		B0272A4C2056EFC7003D662C /* profile-login-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0272A4B2056EFC7003D662C /* profile-login-icon.png */; };
+		B02ACF8F205CA68200D8953B /* back-home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B02ACF8E205CA68100D8953B /* back-home-button.png */; };
 		B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E97BA205221850000AB47 /* HomeViewController.swift */; };
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
@@ -80,6 +81,7 @@
 		B0272A462055DFB6003D662C /* pantry-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pantry-button.png"; sourceTree = "<group>"; };
 		B0272A4920564540003D662C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		B0272A4B2056EFC7003D662C /* profile-login-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-login-icon.png"; sourceTree = "<group>"; };
+		B02ACF8E205CA68100D8953B /* back-home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-home-button.png"; sourceTree = "<group>"; };
 		B02E97BA205221850000AB47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B02ACF8E205CA68100D8953B /* back-home-button.png */,
 				B02689AE2058A1460059179A /* cell-selection-icon.png */,
 				B02689AC20586CDF0059179A /* seafood-icon.png */,
 				B026899D205861CD0059179A /* breakfast-icon.png */,
@@ -373,6 +376,7 @@
 				B0A410FB204CF3C000341042 /* Lato-Heavy.ttf in Resources */,
 				B0A410F0204CF3C000341042 /* Lato-Thin.ttf in Resources */,
 				B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */,
+				B02ACF8F205CA68200D8953B /* back-home-button.png in Resources */,
 				B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */,
 				B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */,
 				B02689A7205861CD0059179A /* sandwhiches-icon.png in Resources */,
