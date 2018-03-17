@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     // Controller Variables
     var invalidLoginCredentials: Bool = true
     
@@ -64,10 +64,18 @@ class LoginViewController: UIViewController {
     
     // Configuring ui elements when app loads
     func interfaceSetup() {
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         loginButton.imageView?.layer.cornerRadius = 10
+    }
+    
+    // Hide keyboard
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     // Hides status bar

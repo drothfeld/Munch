@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-class NewUserViewController: UIViewController {
+class NewUserViewController: UIViewController, UITextFieldDelegate {
     // Controller Elements
     var invalidLoginCredentials: Bool = true
     
@@ -31,6 +31,12 @@ class NewUserViewController: UIViewController {
     
     // Configuring ui elements when app loads
     func interfaceSetup() {
+        // Setting textfield delegates
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        // Setting placeholder text for textfields
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
@@ -160,6 +166,12 @@ class NewUserViewController: UIViewController {
             truncated.remove(at: truncated.index(before: truncated.endIndex))
         }
         return truncated
+    }
+    
+    // Hide keyboard
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     // Hides status bar
