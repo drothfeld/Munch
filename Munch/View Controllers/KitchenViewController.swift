@@ -23,7 +23,7 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         interfaceSetup()
-        prepare()
+        prepare()  
     }
     
     // Refresh the table
