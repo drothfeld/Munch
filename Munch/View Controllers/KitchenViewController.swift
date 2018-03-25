@@ -43,13 +43,13 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
         if(velocity.y>0) {
             UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
                 self.MenuBarView.center = CGPoint(x: 187.5, y: -25.0)
-                print("Hide")
+//                print("Hide")
             }, completion: nil)
             
         } else {
             UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
                 self.MenuBarView.center = CGPoint(x: 187.5, y: 25.0)
-                print("Unhide")
+//                print("Unhide")
             }, completion: nil)
         }
     }
@@ -105,14 +105,14 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     // Choosing specific cooking category
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let indexPath = KitchenTableView.indexPathForSelectedRow {
-//            let cookingCategory: CookingCategory
-//            cookingCategory = cooking_categories[indexPath.row]
-//            let controller = segue.destination as! CookingCategoryRecipesViewController
-//            controller.currentCategory = cookingCategory
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = KitchenTableView.indexPathForSelectedRow {
+            let cookingCategory: CookingCategory
+            cookingCategory = cooking_categories[indexPath.row]
+            let controller = segue.destination as! RecipeCategoryListViewController
+            controller.cookingCategory = cookingCategory
+        }
+    }
     
     // Hides status bar
     override var prefersStatusBarHidden: Bool{

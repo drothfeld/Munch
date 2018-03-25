@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CtB-0A-mtR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="-69.715142428785612"/>
+            <point key="canvasLocation" x="-391" y="-71"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="t9l-nI-O6Q">
@@ -313,7 +313,7 @@ Go to your pantry to add some.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me7-JE-thf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308" y="-70"/>
+            <point key="canvasLocation" x="1174" y="-70"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="nMt-a7-f6Q">
@@ -482,7 +482,7 @@ Go to your pantry to add some.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3s-eJ-6YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="778.56071964017997"/>
+            <point key="canvasLocation" x="-391" y="778"/>
         </scene>
         <!--Kitchen View Controller-->
         <scene sceneID="fPS-2V-0mX">
@@ -520,6 +520,9 @@ Go to your pantry to add some.</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="p7M-s1-kNP" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="3U6-3t-nDc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -682,7 +685,7 @@ FULL
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXt-Sf-C60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="-1593"/>
+            <point key="canvasLocation" x="-391" y="-1594"/>
         </scene>
         <!--Recipe Category List View Controller-->
         <scene sceneID="Txe-Gk-dhH">
@@ -697,7 +700,7 @@ FULL
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="-1594"/>
+            <point key="canvasLocation" x="1174" y="-1594"/>
         </scene>
     </scenes>
     <resources>
@@ -715,6 +718,6 @@ FULL
     <inferredMetricsTieBreakers>
         <segue reference="jSb-Uh-qcz"/>
         <segue reference="9rk-Tn-J5o"/>
-        <segue reference="Yg8-ZU-M2m"/>
+        <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
 </document>

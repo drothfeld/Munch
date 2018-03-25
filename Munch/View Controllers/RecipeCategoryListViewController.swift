@@ -11,12 +11,28 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class RecipeCategoryListViewController: UIViewController {
+    // UI Elements
+    
+    // Defined Values
+    var selectedRecipes: [Recipe]!
+    var cookingCategory: CookingCategory? {
+        didSet {
+            interfaceSetup()
+        }
+    }
     
     // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //interfaceSetup()
+        interfaceSetup()
+    }
+    
+    // Setting up view
+    func interfaceSetup() {
+        if let cookingCategory = cookingCategory {
+            print(cookingCategory.name)
+        }
     }
     
     // Hides status bar
