@@ -40,6 +40,7 @@
 		B06175E0204CEB2A00462CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06175DE204CEB2A00462CCE /* LaunchScreen.storyboard */; };
 		B08AFABB2054597B00B7DF2F /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AFABA2054597B00B7DF2F /* FoodItem.swift */; };
 		B09DFCEF2065780C0037AFD7 /* RecipeCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DFCEE2065780C0037AFD7 /* RecipeCategoryListViewController.swift */; };
+		B09DFCF120681BCF0037AFD7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DFCF020681BCF0037AFD7 /* Recipe.swift */; };
 		B0A410D6204CF28D00341042 /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A410D5204CF28D00341042 /* login_background.png */; };
 		B0A410ED204CF3C000341042 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410D9204CF3C000341042 /* Lato-HeavyItalic.ttf */; };
 		B0A410EE204CF3C000341042 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410DA204CF3C000341042 /* Lato-Italic.ttf */; };
@@ -105,6 +106,7 @@
 		B06175E1204CEB2A00462CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08AFABA2054597B00B7DF2F /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		B09DFCEE2065780C0037AFD7 /* RecipeCategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryListViewController.swift; sourceTree = "<group>"; };
+		B09DFCF020681BCF0037AFD7 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		B0A410D5204CF28D00341042 /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
 		B0A410D9204CF3C000341042 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		B0A410DA204CF3C000341042 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				B08AFABA2054597B00B7DF2F /* FoodItem.swift */,
 				B0272A4920564540003D662C /* UserProfile.swift */,
 				B0B13AA5205835190013C38B /* CookingCategory.swift */,
+				B09DFCF020681BCF0037AFD7 /* Recipe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */,
 				B0B13AA4205832040013C38B /* KitchenViewController.swift in Sources */,
 				B0B13AA6205835190013C38B /* CookingCategory.swift in Sources */,
+				B09DFCF120681BCF0037AFD7 /* Recipe.swift in Sources */,
 				B0B13A9D20582DF60013C38B /* PantryViewController.swift in Sources */,
 				B09DFCEF2065780C0037AFD7 /* RecipeCategoryListViewController.swift in Sources */,
 				B0B13AA020582E930013C38B /* SegueFromLeft.swift in Sources */,
