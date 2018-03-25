@@ -14,7 +14,7 @@ class RecipeCategoryListViewController: UIViewController {
     // UI Elements
     
     // Defined Values
-    var selectedRecipes: [Recipe]!
+    var selectedRecipes: [Recipe] = []
     var cookingCategory: CookingCategory? {
         didSet {
             interfaceSetup()
@@ -31,7 +31,18 @@ class RecipeCategoryListViewController: UIViewController {
     // Setting up view
     func interfaceSetup() {
         if let cookingCategory = cookingCategory {
-            print(cookingCategory.name)
+                // Getting recipes JSON object
+                let recipesRef = Database.database().reference(withPath: "recipes/")
+                recipesRef.observe(.value, with: { snapshot in
+                    // Parsing JSON data
+                    for item in snapshot.children {
+                        let recipe = Recipe(snapshot: item as! DataSnapshot)
+                        // Making sure recipe is of the correct cooking category
+                        if (recipe.type.uppercased() == cookingCategory.name) {
+                            self.selectedRecipes.append(recipe)
+                        }
+                    }
+                })
         }
     }
     
