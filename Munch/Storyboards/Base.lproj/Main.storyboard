@@ -694,9 +694,47 @@ FULL
                     <view key="view" contentMode="scaleToFill" id="2VI-lw-mKD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSB-fJ-sfG" userLabel="Menu Bar View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CATEGORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeH-1o-afP" userLabel="Menu Bar Label">
+                                        <rect key="frame" x="92" y="10" width="191" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                        <color key="textColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssn-gf-Wvm" userLabel="New Recipe Button">
+                                        <rect key="frame" x="345" y="14" width="22" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="7rA-ad-W0K" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="WGC-7p-Fgf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt7-yw-xg9" userLabel="Back Home Button">
+                                        <rect key="frame" x="8" y="13" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back-home-button.png">
+                                            <color key="titleColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CtB-0A-mtR" kind="custom" customClass="SegueFromLeft" customModule="Munch" customModuleProvider="target" id="EdI-Ff-w2i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3fp-78-Z1Y"/>
                     </view>
+                    <connections>
+                        <outlet property="MenuBar" destination="wSB-fJ-sfG" id="v6s-6a-Hmv"/>
+                        <outlet property="MenuBarCategoryText" destination="PeH-1o-afP" id="tuR-gM-LDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -716,8 +754,9 @@ FULL
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jSb-Uh-qcz"/>
-        <segue reference="9rk-Tn-J5o"/>
+        <segue reference="WGC-7p-Fgf"/>
+        <segue reference="EdI-Ff-w2i"/>
+        <segue reference="pHg-9Q-WxV"/>
         <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
 </document>
