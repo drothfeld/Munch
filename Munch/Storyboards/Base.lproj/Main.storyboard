@@ -578,6 +578,47 @@ Go to your pantry to add some.</string>
             </objects>
             <point key="canvasLocation" x="392.80000000000001" y="-824.43778110944538"/>
         </scene>
+        <!--New Recipe Full View Controller-->
+        <scene sceneID="kLr-z9-cZY">
+            <objects>
+                <viewController id="Xhg-6x-yid" customClass="NewRecipeFullViewController" customModule="Munch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qDg-E5-cu7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-dO-xJ8" userLabel="Menu Bar View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEW RECIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-S0-Lbn" userLabel="Menu Bar Label">
+                                        <rect key="frame" x="71" y="10" width="233" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                        <color key="textColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-FR-npQ" userLabel="Back Kitchen Button">
+                                        <rect key="frame" x="8" y="13" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back-home-button.png">
+                                            <color key="titleColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7rA-ad-W0K" kind="custom" customClass="SegueFromLeft" customModule="Munch" customModuleProvider="target" id="V0g-f4-5ry"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="011-yD-TWE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ls-5y-eC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="-2364"/>
+        </scene>
         <!--New Recipe Selection-->
         <scene sceneID="N6A-E9-PmT">
             <objects>
@@ -648,6 +689,9 @@ FULL
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="Xhg-6x-yid" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="UHh-8c-R12"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="full-recipe-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="T0S-Xi-0ks" userLabel="Quick Recipe Image">
                                 <rect key="frame" x="61" y="387" width="253" height="135"/>
@@ -827,9 +871,8 @@ in this category.</string>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GFJ-Wn-3sM"/>
-        <segue reference="WGC-7p-Fgf"/>
-        <segue reference="EdI-Ff-w2i"/>
+        <segue reference="V0g-f4-5ry"/>
+        <segue reference="jSb-Uh-qcz"/>
         <segue reference="9rk-Tn-J5o"/>
         <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
