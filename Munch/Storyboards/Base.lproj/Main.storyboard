@@ -16,6 +16,9 @@
         <array key="Lato-Light.ttf">
             <string>Lato-Light</string>
         </array>
+        <array key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -695,7 +698,7 @@ FULL
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-UQ-Qy3" userLabel="Recipe Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-UQ-Qy3" userLabel="Recipe Table View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -704,7 +707,7 @@ FULL
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KaM-c4-Xfx" id="YKY-0J-TqZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CP8-f8-9Ir">
@@ -762,19 +765,53 @@ FULL
                                 </subviews>
                                 <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-nq-8ZT" userLabel="No Recipes Label">
+                                <rect key="frame" x="0.0" y="200" width="375" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">There are currently no recipes 
+in this category.</string>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-R8-wL7" userLabel="Create Recipe Backup Button">
+                                <rect key="frame" x="50" y="325" width="275" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.059353298610000001" green="0.95469232250000002" blue="0.89869068289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CREATE A NEW RECIPE" backgroundImage="login_button_background.png">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.imageView.layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="dKa-Bx-aYg" eventType="touchUpInside" id="kcv-68-Wsr"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="df6-CQ-TyQ"/>
+                                    <segue destination="7rA-ad-W0K" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="4Cs-Zi-oJx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3fp-78-Z1Y"/>
                     </view>
                     <connections>
+                        <outlet property="CreateNewRecipeBackupButton" destination="nXN-R8-wL7" id="Po8-Xd-FHA"/>
                         <outlet property="MenuBar" destination="wSB-fJ-sfG" id="v6s-6a-Hmv"/>
                         <outlet property="MenuBarCategoryText" destination="PeH-1o-afP" id="tuR-gM-LDg"/>
+                        <outlet property="NoRecipesLabel" destination="etZ-nq-8ZT" id="8f0-Q9-DZj"/>
                         <outlet property="RecipeTableView" destination="R3G-UQ-Qy3" id="Mff-Aa-7VA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="-1584"/>
+            <point key="canvasLocation" x="1348" y="-1584.5577211394304"/>
         </scene>
     </scenes>
     <resources>
@@ -790,9 +827,10 @@ FULL
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="GFJ-Wn-3sM"/>
         <segue reference="WGC-7p-Fgf"/>
         <segue reference="EdI-Ff-w2i"/>
-        <segue reference="pHg-9Q-WxV"/>
+        <segue reference="9rk-Tn-J5o"/>
         <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
 </document>

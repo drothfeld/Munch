@@ -16,6 +16,8 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var MenuBar: UIView!
     @IBOutlet weak var MenuBarCategoryText: UILabel!
     @IBOutlet weak var RecipeTableView: UITableView!
+    @IBOutlet weak var NoRecipesLabel: UILabel!
+    @IBOutlet weak var CreateNewRecipeBackupButton: UIButton!
     
     // Defined Values
     var selectedRecipes: [Recipe] = []
@@ -76,6 +78,12 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                             self.selectedRecipes.append(recipe)
                         }
                     }
+                    // Checking if there are no available recipes
+                    if (self.selectedRecipes.count == 0) {
+                        self.NoRecipesLabel.isHidden = false
+                        self.CreateNewRecipeBackupButton.isHidden = false
+                    }
+                    // Reset table
                     self.refreshTable()
                 })
         }
