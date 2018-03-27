@@ -16,12 +16,18 @@ class NewRecipeFullViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //interfaceSetup()
+        interfaceSetup()
     }
     
     // Hides status bar
     override var prefersStatusBarHidden: Bool{
         return true
+    }
+    
+    // Set up interface elements
+    func interfaceSetup() {
+        // Setting background image
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
     }
     
 }

@@ -18,6 +18,7 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var RecipeTableView: UITableView!
     @IBOutlet weak var NoRecipesLabel: UILabel!
     @IBOutlet weak var CreateNewRecipeBackupButton: UIButton!
+    @IBOutlet weak var BackToKitchenButton: UIButton!
     
     // Defined Values
     var selectedRecipes: [Recipe] = []
@@ -82,6 +83,9 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                     if (self.selectedRecipes.count == 0) {
                         self.NoRecipesLabel.isHidden = false
                         self.CreateNewRecipeBackupButton.isHidden = false
+                        self.RecipeTableView.isHidden = true
+                        self.BackToKitchenButton.isHidden = false
+                        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
                     }
                     // Reset table
                     self.refreshTable()
