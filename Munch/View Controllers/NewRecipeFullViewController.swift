@@ -10,7 +10,9 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-class NewRecipeFullViewController: UIViewController {
+class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
+    // UI Elements
+    @IBOutlet weak var RecipeNameTextField: UITextField!
     
     // Onload
     override func viewDidLoad() {
@@ -26,8 +28,10 @@ class NewRecipeFullViewController: UIViewController {
     
     // Set up interface elements
     func interfaceSetup() {
-        // Setting background image
+        // Setting ui element attributes
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
+        self.RecipeNameTextField.delegate = self
+        self.RecipeNameTextField.attributedPlaceholder = NSAttributedString(string:"Recipe Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
     }
     
 }

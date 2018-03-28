@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CtB-0A-mtR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xhg-6x-yid">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -584,12 +585,11 @@ Go to your pantry to add some.</string>
             <objects>
                 <viewController id="Xhg-6x-yid" customClass="NewRecipeFullViewController" customModule="Munch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qDg-E5-cu7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-dO-xJ8" userLabel="Menu Bar View">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-dO-xJ8" userLabel="Menu Bar View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEW RECIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-S0-Lbn" userLabel="Menu Bar Label">
                                         <rect key="frame" x="71" y="10" width="233" height="30"/>
@@ -611,14 +611,90 @@ Go to your pantry to add some.</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-Qa-jrw">
+                                <rect key="frame" x="0.0" y="51" width="375" height="1149"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKM-Yx-8LQ" userLabel="Recipe Name Field">
+                                        <rect key="frame" x="25" y="8" width="325" height="45"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cV3-OX-gpC" userLabel="Recipe Name Text Line">
+                                                <rect key="frame" x="7" y="50" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recipe Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-BF-Rxo" userLabel="Recipe Name Text Field">
+                                                <rect key="frame" x="38" y="0.0" width="276" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="username"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recipe-name-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-fK-rIK" userLabel="Recipe Name Icon Image">
+                                                <rect key="frame" x="-6" y="6" width="36" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="8af-gM-aAO"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWM-3Y-nlD" userLabel="Create Recipe Button">
+                                        <rect key="frame" x="30" y="1055" width="315" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.059353298610000001" green="0.95469232250000002" blue="0.89869068289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="CREATE RECIPE" backgroundImage="login_button_background.png">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.imageView.layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmd-j5-muE" userLabel="Create Recipe Error Label">
+                                        <rect key="frame" x="25" y="1018" width="325" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                        <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FKM-Yx-8LQ" firstAttribute="leading" secondItem="Kqk-Qa-jrw" secondAttribute="leading" constant="25" id="1B0-DQ-zQP"/>
+                                    <constraint firstItem="FKM-Yx-8LQ" firstAttribute="top" secondItem="Kqk-Qa-jrw" secondAttribute="topMargin" id="8kJ-vL-Ib1"/>
+                                    <constraint firstAttribute="bottom" secondItem="FKM-Yx-8LQ" secondAttribute="bottom" constant="1096" id="S28-EG-B0S"/>
+                                    <constraint firstItem="FKM-Yx-8LQ" firstAttribute="centerX" secondItem="Kqk-Qa-jrw" secondAttribute="centerX" id="hub-jW-DqA"/>
+                                    <constraint firstAttribute="trailing" secondItem="FKM-Yx-8LQ" secondAttribute="trailing" constant="25" id="npc-eW-0T6"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.32153421259912696" green="0.32708696924027386" blue="0.48736944628647216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="top" secondItem="qDg-E5-cu7" secondAttribute="top" constant="51" id="2Au-jn-Kcf"/>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="trailing" secondItem="Agr-dO-xJ8" secondAttribute="trailing" id="5HA-tv-qAO"/>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="leading" secondItem="Agr-dO-xJ8" secondAttribute="leading" id="8CK-nT-bGj"/>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="top" secondItem="Agr-dO-xJ8" secondAttribute="bottom" constant="1" id="PFU-Xj-AIi"/>
+                            <constraint firstAttribute="trailing" secondItem="Kqk-Qa-jrw" secondAttribute="trailing" id="S8G-TD-eCd"/>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="leading" secondItem="qDg-E5-cu7" secondAttribute="leading" id="fmR-p1-aja"/>
+                            <constraint firstItem="Agr-dO-xJ8" firstAttribute="top" secondItem="qDg-E5-cu7" secondAttribute="top" id="fym-2m-cLh"/>
+                            <constraint firstItem="Kqk-Qa-jrw" firstAttribute="bottom" secondItem="011-yD-TWE" secondAttribute="bottom" id="mM7-Fy-XFt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="011-yD-TWE"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="RecipeNameTextField" destination="Re6-BF-Rxo" id="D3o-h9-Jee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ls-5y-eC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="-2364"/>
+            <point key="canvasLocation" x="-1284" y="-1824.2878560719641"/>
         </scene>
         <!--New Recipe Selection-->
         <scene sceneID="N6A-E9-PmT">
@@ -893,12 +969,13 @@ in this category.</string>
         <image name="password_login_icon.png" width="264" height="265"/>
         <image name="profile-login-icon.png" width="1187" height="1187"/>
         <image name="quick-recipe-icon.png" width="500" height="500"/>
+        <image name="recipe-name-icon.png" width="541" height="500"/>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WGC-7p-Fgf"/>
-        <segue reference="EdI-Ff-w2i"/>
-        <segue reference="pHg-9Q-WxV"/>
+        <segue reference="V0g-f4-5ry"/>
+        <segue reference="jSb-Uh-qcz"/>
+        <segue reference="9rk-Tn-J5o"/>
         <segue reference="Yg8-ZU-M2m"/>
     </inferredMetricsTieBreakers>
 </document>
