@@ -14,6 +14,20 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // UI Elements
     @IBOutlet weak var RecipeNameTextField: UITextField!
     @IBOutlet weak var SelectCategoryButton: UIButton!
+    @IBOutlet weak var DrinkCategoryButton: UIButton!
+    @IBOutlet weak var RedMeatCategoryButton: UIButton!
+    @IBOutlet weak var SeafoodCategoryButton: UIButton!
+    @IBOutlet weak var VegetarianCategoryButton: UIButton!
+    @IBOutlet weak var SoupCategoryButton: UIButton!
+    @IBOutlet weak var SandwichCategoryButton: UIButton!
+    @IBOutlet weak var DessertCategoryButton: UIButton!
+    @IBOutlet weak var PoultryCategoryButton: UIButton!
+    @IBOutlet weak var BreakfastCategoryButton: UIButton!
+    @IBOutlet weak var SelectCategoryIcon: UIImageView!
+    @IBOutlet weak var CategoryColorImage: UIImageView!
+    
+    // Controller Values
+    var selectedCategory: CookingCategory!
     
     // Onload
     override func viewDidLoad() {
@@ -29,7 +43,6 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     
     // Select category dropdown button is pressed
     @IBAction func selectCategoryButtonPressed(_ sender: Any) {
-        
     }
     
     // Hide keyboard
@@ -40,10 +53,72 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     
     // Set up interface elements
     func interfaceSetup() {
+        // Building button array
+        let cookingCategoryButtons: [UIButton] = [DrinkCategoryButton, RedMeatCategoryButton, SeafoodCategoryButton, VegetarianCategoryButton, SoupCategoryButton, SandwichCategoryButton, DessertCategoryButton, PoultryCategoryButton, BreakfastCategoryButton]
         // Setting ui element attributes
+        for (index, button) in cookingCategoryButtons.enumerated() {
+            button.backgroundColor = cooking_categories[index].color
+        }
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         self.RecipeNameTextField.delegate = self
         self.RecipeNameTextField.attributedPlaceholder = NSAttributedString(string:"Recipe Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+    }
+    
+    // Food category button is pressed
+    @IBAction func DrinkCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = drinks
+        SelectCategoryIcon.image = drinks.icon
+        SelectCategoryButton.setTitle("Drink", for: .normal)
+        CategoryColorImage.backgroundColor = drinks.color
+    }
+    @IBAction func RedMeatCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = red_meat
+        SelectCategoryIcon.image = red_meat.icon
+        SelectCategoryButton.setTitle("Red Meat", for: .normal)
+        CategoryColorImage.backgroundColor = red_meat.color
+    }
+    @IBAction func SeafoodCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = seafood
+        SelectCategoryIcon.image = seafood.icon
+        SelectCategoryButton.setTitle("Seafood", for: .normal)
+        CategoryColorImage.backgroundColor = seafood.color
+    }
+    @IBAction func VegetarianCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = vegetarian
+        SelectCategoryIcon.image = vegetarian.icon
+        SelectCategoryButton.setTitle("Vegetarian", for: .normal)
+        CategoryColorImage.backgroundColor = vegetarian.color
+    }
+    @IBAction func SoupCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = soups
+        SelectCategoryIcon.image = soups.icon
+        SelectCategoryButton.setTitle("Soup", for: .normal)
+        CategoryColorImage.backgroundColor = soups.color
+    }
+    @IBAction func SandwichCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = sandwiches
+        SelectCategoryIcon.image = sandwiches.icon
+        SelectCategoryButton.setTitle("Sandwich", for: .normal)
+        CategoryColorImage.backgroundColor = sandwiches.color
+    }
+    @IBAction func DessertCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = dessert
+        SelectCategoryIcon.image = dessert.icon
+        SelectCategoryButton.setTitle("Dessert", for: .normal)
+        CategoryColorImage.backgroundColor = dessert.color
+    }
+    @IBAction func PoultryCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = poultry
+        SelectCategoryIcon.image = poultry.icon
+        SelectCategoryButton.setTitle("Poultry", for: .normal)
+        CategoryColorImage.backgroundColor = poultry.color
+    }
+    @IBAction func BreakfastCategoryButtonPressed(_ sender: Any) {
+        selectedCategory = breakfast
+        SelectCategoryIcon.image = breakfast.icon
+        SelectCategoryButton.setTitle("Breakfast", for: .normal)
+        CategoryColorImage.backgroundColor = breakfast.color
     }
     
 }
