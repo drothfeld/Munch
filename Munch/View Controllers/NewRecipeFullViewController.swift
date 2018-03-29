@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // UI Elements
+    @IBOutlet weak var CategorySelectionsView: UIView!
     @IBOutlet weak var RecipeNameTextField: UITextField!
     @IBOutlet weak var SelectCategoryButton: UIButton!
     @IBOutlet weak var DrinkCategoryButton: UIButton!
@@ -28,12 +29,14 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     
     // Controller Values
     var selectedCategory: CookingCategory!
+    var categorySelectionIsOn: Bool = false
     
     // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
+        print(CategorySelectionsView.frame.origin)
     }
     
     // Hides status bar
@@ -43,7 +46,27 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     
     // Select category dropdown button is pressed
     @IBAction func selectCategoryButtonPressed(_ sender: Any) {
+        if (categorySelectionIsOn) {
+            animateCategorySelectionOut()
+        } else {
+            animateCategorySelectionIn()
+        }
     }
+    
+    // Animate category selection menu
+    func animateCategorySelectionIn() {
+        UIView.animate(withDuration: 0.75, animations: { () -> Void in
+            self.CategorySelectionsView.frame.origin = CGPoint(x: -6.0, y: 61.0)
+        })
+        categorySelectionIsOn = true
+    }
+    func animateCategorySelectionOut() {
+        UIView.animate(withDuration: 0.75, animations: { () -> Void in
+            self.CategorySelectionsView.frame.origin = CGPoint(x: -400.0, y: 61.0)
+        })
+        categorySelectionIsOn = false
+    }
+    
     
     // Hide keyboard
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -71,54 +94,63 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         SelectCategoryIcon.image = drinks.icon
         SelectCategoryButton.setTitle("Drink", for: .normal)
         CategoryColorImage.backgroundColor = drinks.color
+        animateCategorySelectionOut()
     }
     @IBAction func RedMeatCategoryButtonPressed(_ sender: Any) {
         selectedCategory = red_meat
         SelectCategoryIcon.image = red_meat.icon
         SelectCategoryButton.setTitle("Red Meat", for: .normal)
         CategoryColorImage.backgroundColor = red_meat.color
+        animateCategorySelectionOut()
     }
     @IBAction func SeafoodCategoryButtonPressed(_ sender: Any) {
         selectedCategory = seafood
         SelectCategoryIcon.image = seafood.icon
         SelectCategoryButton.setTitle("Seafood", for: .normal)
         CategoryColorImage.backgroundColor = seafood.color
+        animateCategorySelectionOut()
     }
     @IBAction func VegetarianCategoryButtonPressed(_ sender: Any) {
         selectedCategory = vegetarian
         SelectCategoryIcon.image = vegetarian.icon
         SelectCategoryButton.setTitle("Vegetarian", for: .normal)
         CategoryColorImage.backgroundColor = vegetarian.color
+        animateCategorySelectionOut()
     }
     @IBAction func SoupCategoryButtonPressed(_ sender: Any) {
         selectedCategory = soups
         SelectCategoryIcon.image = soups.icon
         SelectCategoryButton.setTitle("Soup", for: .normal)
         CategoryColorImage.backgroundColor = soups.color
+        animateCategorySelectionOut()
     }
     @IBAction func SandwichCategoryButtonPressed(_ sender: Any) {
         selectedCategory = sandwiches
         SelectCategoryIcon.image = sandwiches.icon
         SelectCategoryButton.setTitle("Sandwich", for: .normal)
         CategoryColorImage.backgroundColor = sandwiches.color
+        animateCategorySelectionOut()
     }
     @IBAction func DessertCategoryButtonPressed(_ sender: Any) {
         selectedCategory = dessert
         SelectCategoryIcon.image = dessert.icon
         SelectCategoryButton.setTitle("Dessert", for: .normal)
         CategoryColorImage.backgroundColor = dessert.color
+        animateCategorySelectionOut()
     }
     @IBAction func PoultryCategoryButtonPressed(_ sender: Any) {
         selectedCategory = poultry
         SelectCategoryIcon.image = poultry.icon
         SelectCategoryButton.setTitle("Poultry", for: .normal)
         CategoryColorImage.backgroundColor = poultry.color
+        animateCategorySelectionOut()
     }
     @IBAction func BreakfastCategoryButtonPressed(_ sender: Any) {
         selectedCategory = breakfast
         SelectCategoryIcon.image = breakfast.icon
         SelectCategoryButton.setTitle("Breakfast", for: .normal)
         CategoryColorImage.backgroundColor = breakfast.color
+        animateCategorySelectionOut()
     }
     
 }
