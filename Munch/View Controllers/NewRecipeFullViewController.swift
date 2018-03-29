@@ -13,6 +13,7 @@ import FirebaseDatabase
 class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // UI Elements
     @IBOutlet weak var RecipeNameTextField: UITextField!
+    @IBOutlet weak var SelectCategoryButton: UIButton!
     
     // Onload
     override func viewDidLoad() {
@@ -23,6 +24,17 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     
     // Hides status bar
     override var prefersStatusBarHidden: Bool{
+        return true
+    }
+    
+    // Select category dropdown button is pressed
+    @IBAction func selectCategoryButtonPressed(_ sender: Any) {
+        
+    }
+    
+    // Hide keyboard
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
         return true
     }
     

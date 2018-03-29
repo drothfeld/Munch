@@ -29,6 +29,7 @@
 		B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E97BA205221850000AB47 /* HomeViewController.swift */; };
 		B053C9C4206AD143001E0411 /* NewRecipeFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */; };
 		B053C9C6206C2730001E0411 /* recipe-name-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B053C9C5206C2730001E0411 /* recipe-name-icon.png */; };
+		B053C9C8206D5E12001E0411 /* question-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B053C9C7206D5E11001E0411 /* question-icon.png */; };
 		B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5A204E0D2900AF67BD /* password_login_icon.png */; };
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
 		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
@@ -95,6 +96,7 @@
 		B02E97BA205221850000AB47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeFullViewController.swift; sourceTree = "<group>"; };
 		B053C9C5206C2730001E0411 /* recipe-name-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipe-name-icon.png"; sourceTree = "<group>"; };
+		B053C9C7206D5E11001E0411 /* question-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-icon.png"; sourceTree = "<group>"; };
 		B0580E5A204E0D2900AF67BD /* password_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password_login_icon.png; sourceTree = "<group>"; };
 		B0580E5E204E0F5F00AF67BD /* username_login_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_login_icon.png; sourceTree = "<group>"; };
 		B0580E60204E110E00AF67BD /* login_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button_background.png; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B053C9C7206D5E11001E0411 /* question-icon.png */,
 				B053C9C5206C2730001E0411 /* recipe-name-icon.png */,
 				B02ACF96205CAF9100D8953B /* full-recipe-icon.png */,
 				B02ACF92205CAE4200D8953B /* quick-recipe-icon.png */,
@@ -412,6 +415,7 @@
 				B06175DB204CEB2A00462CCE /* Main.storyboard in Resources */,
 				B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */,
 				B02689A6205861CD0059179A /* poultry-icon.png in Resources */,
+				B053C9C8206D5E12001E0411 /* question-icon.png in Resources */,
 				B02689A9205861CD0059179A /* soups-icon.png in Resources */,
 				B0272A482055DFB6003D662C /* pantry-button.png in Resources */,
 				B02689A5205861CD0059179A /* breakfast-icon.png in Resources */,
