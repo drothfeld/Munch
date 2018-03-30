@@ -897,6 +897,7 @@ Milk: 1/3 Cup</string>
                         <outlet property="CategorySelectionsView" destination="gC0-SM-yyW" id="TKq-TW-v6R"/>
                         <outlet property="DessertCategoryButton" destination="4dh-CM-dKO" id="rx3-2Q-2SS"/>
                         <outlet property="DrinkCategoryButton" destination="QKE-wr-Kc3" id="KPh-Mi-RYj"/>
+                        <outlet property="IngredientsTextView" destination="V1h-z5-hux" id="7jA-gR-NBd"/>
                         <outlet property="PoultryCategoryButton" destination="zba-SS-TDR" id="kqA-Xp-M8M"/>
                         <outlet property="RecipeNameTextField" destination="Re6-BF-Rxo" id="D3o-h9-Jee"/>
                         <outlet property="RedMeatCategoryButton" destination="MvV-oT-9Op" id="laq-UU-erq"/>

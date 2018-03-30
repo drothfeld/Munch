@@ -26,6 +26,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var BreakfastCategoryButton: UIButton!
     @IBOutlet weak var SelectCategoryIcon: UIImageView!
     @IBOutlet weak var CategoryColorImage: UIImageView!
+    @IBOutlet weak var IngredientsTextView: UIView!
     
     // Controller Values
     var selectedCategory: CookingCategory!
@@ -57,12 +58,14 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     func animateCategorySelectionIn() {
         UIView.animate(withDuration: 0.75, animations: { () -> Void in
             self.CategorySelectionsView.frame.origin = CGPoint(x: -6.0, y: 61.0)
+            self.IngredientsTextView.frame.origin = CGPoint(x: 350.0, y: 61.0)
         })
         categorySelectionIsOn = true
     }
     func animateCategorySelectionOut() {
         UIView.animate(withDuration: 0.75, animations: { () -> Void in
             self.CategorySelectionsView.frame.origin = CGPoint(x: -400.0, y: 61.0)
+            self.IngredientsTextView.frame.origin = CGPoint(x: -6.0, y: 61.0)
         })
         categorySelectionIsOn = false
     }
