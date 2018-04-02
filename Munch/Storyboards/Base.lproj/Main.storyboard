@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="-73"/>
+            <point key="canvasLocation" x="-474" y="-71"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="t9l-nI-O6Q">
@@ -318,7 +318,7 @@ Go to your pantry to add some.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me7-JE-thf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="-72"/>
+            <point key="canvasLocation" x="1231" y="-71"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="nMt-a7-f6Q">
@@ -487,7 +487,7 @@ Go to your pantry to add some.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3s-eJ-6YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="777"/>
+            <point key="canvasLocation" x="-474" y="711"/>
         </scene>
         <!--Kitchen View Controller-->
         <scene sceneID="fPS-2V-0mX">
@@ -911,7 +911,7 @@ Milk: 1/3 Cup</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ls-5y-eC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-749" y="-1943"/>
+            <point key="canvasLocation" x="-1204" y="-1840"/>
         </scene>
         <!--New Recipe Selection-->
         <scene sceneID="N6A-E9-PmT">
@@ -1026,7 +1026,7 @@ FULL
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXt-Sf-C60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="-1676"/>
+            <point key="canvasLocation" x="-362" y="-1601"/>
         </scene>
         <!--Recipe Category List View Controller-->
         <scene sceneID="Txe-Gk-dhH">
@@ -1173,7 +1173,7 @@ in this category.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="-1676"/>
+            <point key="canvasLocation" x="1134" y="-1600"/>
         </scene>
     </scenes>
     <resources>
