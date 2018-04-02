@@ -1,7 +1,7 @@
 # Munch
 IOS Application
 
-Version 0.0.1
+Version 0.3.2
 
 **Description:**
 - Munch is an iOS application that allows users to create and account that will be used to keep track of all the food a user currently has in stock.
