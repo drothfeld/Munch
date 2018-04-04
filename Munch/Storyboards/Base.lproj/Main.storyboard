@@ -840,7 +840,7 @@ Milk: 1/3 Cup</string>
                                                 <rect key="frame" x="0.0" y="24" width="36" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type Instructions Here" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-R2-cTu" userLabel="Instructions Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Mix all ingredients in reverse alphabetical order." adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-R2-cTu" userLabel="Instructions Text View">
                                                 <rect key="frame" x="38" y="76" width="276" height="192"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -856,6 +856,35 @@ Milk: 1/3 Cup</string>
                                             </label>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXx-81-Sj5" userLabel="Instructions Text Line">
                                                 <rect key="frame" x="13" y="270" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17q-ts-mcs" userLabel="Optional View">
+                                        <rect key="frame" x="19" y="700" width="337" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="optional-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-vv-p7Q" userLabel="Optional Icon Image">
+                                                <rect key="frame" x="0.0" y="24" width="36" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="If desired, add a cup of peanut butter after finishing baking for extra love." adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-C4-XQD" userLabel="Optional Text View">
+                                                <rect key="frame" x="38" y="76" width="276" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Optional Ingredients or Instructions Below:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-rn-uvA" userLabel="Optional Label">
+                                                <rect key="frame" x="45" y="8" width="276" height="66"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-tg-ii9" userLabel="Optional Text Line">
+                                                <rect key="frame" x="13" y="188" width="310" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
@@ -887,30 +916,30 @@ Milk: 1/3 Cup</string>
                                         <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17q-ts-mcs" userLabel="Optional View">
-                                        <rect key="frame" x="19" y="700" width="337" height="195"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-6a-DP3" userLabel="Servings View">
+                                        <rect key="frame" x="19" y="888" width="337" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="optional-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-vv-p7Q" userLabel="Optional Icon Image">
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="servings-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cjh-sb-4Vc" userLabel="Servings Icon Image">
                                                 <rect key="frame" x="0.0" y="24" width="36" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type Optional Instructions or Ingredients Here" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-C4-XQD" userLabel="Optional Text View">
-                                                <rect key="frame" x="38" y="76" width="276" height="110"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="7-10 slices assuming 8 inch pan." adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fge-eM-3UF" userLabel="Servings Text View">
+                                                <rect key="frame" x="38" y="76" width="276" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Optional Ingredients or Instructions Below:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-rn-uvA" userLabel="Optional Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Servings Information Below:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="736-fm-2KM" userLabel="Servings Label">
                                                 <rect key="frame" x="45" y="8" width="276" height="66"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-tg-ii9" userLabel="Optional Text Line">
-                                                <rect key="frame" x="13" y="188" width="310" height="1"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kC2-n0-xIm" userLabel="Servings Text Line">
+                                                <rect key="frame" x="13" y="125" width="310" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
@@ -966,13 +995,14 @@ Milk: 1/3 Cup</string>
                         <outlet property="SeafoodCategoryButton" destination="0zy-Kk-GCr" id="mvS-wJ-BUM"/>
                         <outlet property="SelectCategoryButton" destination="tuh-n8-fXg" id="irx-rq-ZoA"/>
                         <outlet property="SelectCategoryIcon" destination="HhN-kj-SHK" id="iOo-BO-IyG"/>
+                        <outlet property="ServingsTextView" destination="Fge-eM-3UF" id="tYs-Rh-Iob"/>
                         <outlet property="SoupCategoryButton" destination="CDw-Vx-VtO" id="TSh-a8-duf"/>
                         <outlet property="VegetarianCategoryButton" destination="a5W-KJ-D9z" id="DO7-GW-Ryl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ls-5y-eC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="-1840"/>
+            <point key="canvasLocation" x="-1204" y="-1840.4797601199402"/>
         </scene>
         <!--New Recipe Selection-->
         <scene sceneID="N6A-E9-PmT">
@@ -1252,6 +1282,7 @@ in this category.</string>
         <image name="question-icon.png" width="500" height="500"/>
         <image name="quick-recipe-icon.png" width="500" height="500"/>
         <image name="recipe-name-icon.png" width="541" height="500"/>
+        <image name="servings-icon.png" width="500" height="500"/>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
