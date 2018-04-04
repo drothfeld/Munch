@@ -73,6 +73,8 @@
 		B0B13AA6205835190013C38B /* CookingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13AA5205835190013C38B /* CookingCategory.swift */; };
 		B0B13AA9205835AD0013C38B /* CookingCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B13AA8205835AD0013C38B /* CookingCategories.swift */; };
 		B0BA0E0B2073DBEA00F90823 /* instructions-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0BA0E0A2073DBE900F90823 /* instructions-icon.png */; };
+		B0BA0E0E207534AF00F90823 /* servings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0BA0E0C207534AD00F90823 /* servings-icon.png */; };
+		B0BA0E0F207534AF00F90823 /* optional-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0BA0E0D207534AE00F90823 /* optional-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +146,8 @@
 		B0B13AA5205835190013C38B /* CookingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCategory.swift; sourceTree = "<group>"; };
 		B0B13AA8205835AD0013C38B /* CookingCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCategories.swift; sourceTree = "<group>"; };
 		B0BA0E0A2073DBE900F90823 /* instructions-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-icon.png"; sourceTree = "<group>"; };
+		B0BA0E0C207534AD00F90823 /* servings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "servings-icon.png"; sourceTree = "<group>"; };
+		B0BA0E0D207534AE00F90823 /* optional-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "optional-icon.png"; sourceTree = "<group>"; };
 		BCCE8041DC44A2C9976B2C6E /* Pods-Munch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.debug.xcconfig"; sourceTree = "<group>"; };
 		C7146E65128077996D5CE157 /* Pods_Munch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Munch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +255,8 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B0BA0E0D207534AE00F90823 /* optional-icon.png */,
+				B0BA0E0C207534AD00F90823 /* servings-icon.png */,
 				B0BA0E0A2073DBE900F90823 /* instructions-icon.png */,
 				B053C9C9206EAEE5001E0411 /* ingredients-icon.png */,
 				B053C9C7206D5E11001E0411 /* question-icon.png */,
@@ -423,6 +429,7 @@
 				B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */,
 				B02689A6205861CD0059179A /* poultry-icon.png in Resources */,
 				B053C9C8206D5E12001E0411 /* question-icon.png in Resources */,
+				B0BA0E0F207534AF00F90823 /* optional-icon.png in Resources */,
 				B02689A9205861CD0059179A /* soups-icon.png in Resources */,
 				B0272A482055DFB6003D662C /* pantry-button.png in Resources */,
 				B02689A5205861CD0059179A /* breakfast-icon.png in Resources */,
@@ -437,6 +444,7 @@
 				B0A410FD204CF3C000341042 /* Lato-BoldItalic.ttf in Resources */,
 				B02689AB205861CD0059179A /* vegetarian-icon.png in Resources */,
 				B02689AD20586CE00059179A /* seafood-icon.png in Resources */,
+				B0BA0E0E207534AF00F90823 /* servings-icon.png in Resources */,
 				B0A410F6204CF3C000341042 /* Lato-Hairline.ttf in Resources */,
 				B0A410FA204CF3C000341042 /* OFL.txt in Resources */,
 				B0272A4C2056EFC7003D662C /* profile-login-icon.png in Resources */,

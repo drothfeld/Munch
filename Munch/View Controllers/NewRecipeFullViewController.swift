@@ -29,6 +29,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var IngredientsView: UIView!
     @IBOutlet weak var InstructionsTextView: UITextView!
     @IBOutlet weak var IngredientsTextView: UITextView!
+    @IBOutlet weak var OptionalTextView: UITextView!
     
     // Controller Values
     var selectedCategory: CookingCategory!

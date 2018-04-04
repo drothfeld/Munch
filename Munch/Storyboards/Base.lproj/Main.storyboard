@@ -833,7 +833,7 @@ Milk: 1/3 Cup</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-3Y-pfO" userLabel="Instructions View">
-                                        <rect key="frame" x="19" y="440" width="337" height="269"/>
+                                        <rect key="frame" x="19" y="423" width="337" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instructions-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="wEU-hb-pCO" userLabel="Instructions Icon Image">
@@ -887,6 +887,35 @@ Milk: 1/3 Cup</string>
                                         <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17q-ts-mcs" userLabel="Optional View">
+                                        <rect key="frame" x="19" y="700" width="337" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="optional-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-vv-p7Q" userLabel="Optional Icon Image">
+                                                <rect key="frame" x="0.0" y="24" width="36" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type Optional Instructions or Ingredients Here" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-C4-XQD" userLabel="Optional Text View">
+                                                <rect key="frame" x="38" y="76" width="276" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Optional Ingredients or Instructions Below:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-rn-uvA" userLabel="Optional Label">
+                                                <rect key="frame" x="45" y="8" width="276" height="66"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-tg-ii9" userLabel="Optional Text Line">
+                                                <rect key="frame" x="13" y="188" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="FKM-Yx-8LQ" firstAttribute="leading" secondItem="Kqk-Qa-jrw" secondAttribute="leading" constant="25" id="1B0-DQ-zQP"/>
@@ -929,6 +958,7 @@ Milk: 1/3 Cup</string>
                         <outlet property="IngredientsTextView" destination="bc8-hw-0v3" id="4Z4-Fp-wJC"/>
                         <outlet property="IngredientsView" destination="V1h-z5-hux" id="hL4-dZ-8uQ"/>
                         <outlet property="InstructionsTextView" destination="ofn-R2-cTu" id="9r2-0u-dbF"/>
+                        <outlet property="OptionalTextView" destination="Ybw-C4-XQD" id="AQm-Dq-r4q"/>
                         <outlet property="PoultryCategoryButton" destination="zba-SS-TDR" id="kqA-Xp-M8M"/>
                         <outlet property="RecipeNameTextField" destination="Re6-BF-Rxo" id="D3o-h9-Jee"/>
                         <outlet property="RedMeatCategoryButton" destination="MvV-oT-9Op" id="laq-UU-erq"/>
@@ -1215,6 +1245,7 @@ in this category.</string>
         <image name="instructions-icon.png" width="500" height="500"/>
         <image name="login_app_icon.png" width="512" height="512"/>
         <image name="login_button_background.png" width="300" height="100"/>
+        <image name="optional-icon.png" width="500" height="500"/>
         <image name="pantry-button.png" width="184" height="184"/>
         <image name="password_login_icon.png" width="264" height="265"/>
         <image name="profile-login-icon.png" width="1187" height="1187"/>
