@@ -36,6 +36,9 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // Controller Values
     var selectedCategory: CookingCategory!
     var categorySelectionIsOn: Bool = false
+    var currentUser: UserProfile!
+    var truncatedUserEmail: String!
+    var recipeNameFirebaseFormat: String!
     
     // Onload
     override func viewDidLoad() {
@@ -105,8 +108,39 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         }
         // Get the current logged in user and create new recipe
         else {
-            
+            ErrorTextLabel.isHidden = true
+            // Getting info of the currently logged in user
+            let user = Auth.auth().currentUser
+            if let user = user {
+                truncatedUserEmail = stripDotCom(username: user.email!)
+                
+                // Create new JSON recipe endpoint
+                let recipeRef = Database.database().reference(withPath: "recipes/")
+                let newRecipe = Recipe(name: self.RecipeNameTextField.text!, isQuickSnapShot: "false", type: selectedCategory.name.lowercased().capitalized, ingredients: "TEST", instructions: InstructionsTextView.text!, optional: OptionalTextView.text!, servingSize: ServingsTextView.text!, author: truncatedUserEmail)
+
+                let newRecipeRef = recipeRef.child(createRecipeEndpoint(originalNameText: self.RecipeNameTextField.text!))
+                newRecipeRef.setValue("name")
+                let newRecipeObjRef = Database.database().reference(withPath: "recipes/" + createRecipeEndpoint(originalNameText: self.RecipeNameTextField.text!))
+                newRecipeObjRef.setValue(newRecipe.toAnyObject())
+
+                // If everything went smoothly, take the user back to the category list screen
+                self.performSegue(withIdentifier: "backToRecipes", sender: self)
+            }
         }
+    }
+    
+    // Create recipe endpoint string from name
+    func createRecipeEndpoint(originalNameText: String) -> String {
+        var newEndpointName: String = ""
+        let splitTextArray = self.RecipeNameTextField.text?.components(separatedBy:  " ")
+        for (index, text) in (splitTextArray?.enumerated())! {
+            if (index == 0) {
+                newEndpointName = text.lowercased()
+            } else {
+                newEndpointName = newEndpointName + "-" + text.lowercased()
+            }
+        }
+        return newEndpointName
     }
     
     // Check validity of new recipe form elements
@@ -205,6 +239,14 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         CategoryColorImage.backgroundColor = breakfast.color
         animateCategorySelectionOut()
     }
-    
+        
+    // Strip the ".com" from a string
+    func stripDotCom(username: String) -> String {
+        var truncated = username
+        for _ in 1...4 {
+            truncated.remove(at: truncated.index(before: truncated.endIndex))
+        }
+        return truncated
+    }
 }
 
