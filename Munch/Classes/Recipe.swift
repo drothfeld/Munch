@@ -18,10 +18,11 @@ struct Recipe {
     var instructions: String
     var optional: String
     var servingSize: String
+    var author: String
     let ref: DatabaseReference?
     
     // Constructors
-    init(name: String, isQuickSnapShot: String, type: String, ingredients: String, instructions: String, optional: String, servingSize: String, key: String = "") {
+    init(name: String, isQuickSnapShot: String, type: String, ingredients: String, instructions: String, optional: String, servingSize: String, author: String, key: String = "") {
         self.name = name
         self.isQuickSnapShot = isQuickSnapShot
         self.type = type
@@ -29,6 +30,7 @@ struct Recipe {
         self.instructions = instructions
         self.optional = optional
         self.servingSize = servingSize
+        self.author = author
         self.ref = nil
     }
     
@@ -41,6 +43,7 @@ struct Recipe {
         instructions = snapshotValue["instructions"] as! String
         optional = snapshotValue["optional"] as! String
         servingSize = snapshotValue["servingSize"] as! String
+        author = snapshotValue["author"] as! String
         ref = snapshot.ref
     }
     
@@ -52,7 +55,8 @@ struct Recipe {
             "ingredients": ingredients,
             "instructions": instructions,
             "optional": optional,
-            "servingSize": servingSize
+            "servingSize": servingSize,
+            "author": author
         ]
     }
 }
