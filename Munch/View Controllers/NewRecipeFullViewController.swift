@@ -31,6 +31,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var IngredientsTextView: UITextView!
     @IBOutlet weak var OptionalTextView: UITextView!
     @IBOutlet weak var ServingsTextView: UITextView!
+    @IBOutlet weak var ErrorTextLabel: UILabel!
     
     // Controller Values
     var selectedCategory: CookingCategory!
@@ -93,6 +94,51 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         self.RecipeNameTextField.delegate = self
         self.RecipeNameTextField.attributedPlaceholder = NSAttributedString(string:"Recipe Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+    }
+    
+    // User presses the create recipe button
+    @IBAction func CreateRecipeButtonPressed(_ sender: Any) {
+        // Check if all recipe form fields are valid
+        if (!allFieldsValid()) {
+            ErrorTextLabel.isHidden = false
+            ErrorTextLabel.text = "Invalid field entry in recipe form"
+        }
+        // Get the current logged in user and create new recipe
+        else {
+            
+        }
+    }
+    
+    // Check validity of new recipe form elements
+    func allFieldsValid() -> Bool {
+        // Validate recipe name
+        if (RecipeNameTextField.text == nil || RecipeNameTextField.text == "") {
+            return false
+        }
+        // Validate recipe category
+        if (selectedCategory == nil) {
+            return false
+        }
+        // Validate ingredients
+        // TODO: Need to validate parsed text to make sure user entered
+        // ingredients in the proper format.
+        if (IngredientsTextView.text == nil || IngredientsTextView.text == "") {
+            return false
+        }
+        // Validate instructions
+        if (InstructionsTextView.text == nil || InstructionsTextView.text == "") {
+            return false
+        }
+        
+        // No need to validate optional ingredients/instructions
+        
+        // Validate servings information
+        if (ServingsTextView.text == nil || ServingsTextView.text == "") {
+            return false
+        }
+        
+        // If all validations pass, return true
+        return true
     }
     
     // Food category button is pressed

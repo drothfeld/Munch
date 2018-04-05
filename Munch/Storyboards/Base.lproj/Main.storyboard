@@ -909,6 +909,9 @@ Milk: 1/3 Cup</string>
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="CreateRecipeButtonPressed:" destination="Xhg-6x-yid" eventType="touchUpInside" id="42G-5A-wOi"/>
+                                        </connections>
                                     </button>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmd-j5-muE" userLabel="Create Recipe Error Label">
                                         <rect key="frame" x="25" y="1018" width="325" height="21"/>
@@ -984,6 +987,7 @@ Milk: 1/3 Cup</string>
                         <outlet property="CategorySelectionsView" destination="gC0-SM-yyW" id="TKq-TW-v6R"/>
                         <outlet property="DessertCategoryButton" destination="4dh-CM-dKO" id="rx3-2Q-2SS"/>
                         <outlet property="DrinkCategoryButton" destination="QKE-wr-Kc3" id="KPh-Mi-RYj"/>
+                        <outlet property="ErrorTextLabel" destination="Rmd-j5-muE" id="jrT-Jm-xvx"/>
                         <outlet property="IngredientsTextView" destination="bc8-hw-0v3" id="4Z4-Fp-wJC"/>
                         <outlet property="IngredientsView" destination="V1h-z5-hux" id="hL4-dZ-8uQ"/>
                         <outlet property="InstructionsTextView" destination="ofn-R2-cTu" id="9r2-0u-dbF"/>
