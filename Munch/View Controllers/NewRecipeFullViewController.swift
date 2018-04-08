@@ -45,7 +45,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
-        print(CategorySelectionsView.frame.origin)
+        print(parseRawIngredientsText(rawIngredientsText: IngredientsTextView.text!))
     }
     
     // Hides status bar
@@ -116,7 +116,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
                 
                 // Create new JSON recipe endpoint
                 let recipeRef = Database.database().reference(withPath: "recipes/")
-                let newRecipe = Recipe(name: self.RecipeNameTextField.text!, isQuickSnapShot: "false", type: selectedCategory.name.lowercased().capitalized, ingredients: "TEST", instructions: InstructionsTextView.text!, optional: OptionalTextView.text!, servingSize: ServingsTextView.text!, author: truncatedUserEmail)
+                let newRecipe = Recipe(name: self.RecipeNameTextField.text!, isQuickSnapShot: "false", type: selectedCategory.name.lowercased().capitalized, ingredients: parseRawIngredientsText(rawIngredientsText: IngredientsTextView.text!), instructions: InstructionsTextView.text!, optional: OptionalTextView.text!, servingSize: ServingsTextView.text!, author: truncatedUserEmail)
 
                 let newRecipeRef = recipeRef.child(createRecipeEndpoint(originalNameText: self.RecipeNameTextField.text!))
                 newRecipeRef.setValue("name")
@@ -124,9 +124,43 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
                 newRecipeObjRef.setValue(newRecipe.toAnyObject())
 
                 // If everything went smoothly, take the user back to the category list screen
+                // TODO: Show quick success animation/screen before segue
                 self.performSegue(withIdentifier: "backToRecipes", sender: self)
             }
         }
+    }
+    
+    // Parse the raw ingredients text to change into desired format
+    func parseRawIngredientsText(rawIngredientsText: String) -> String {
+        var formattedIngredients: String = ""
+        
+        // Separate raw text line by line into array
+        var separatedRawIngredientsText: [String] = []
+        rawIngredientsText.enumerateLines { line, _ in
+            separatedRawIngredientsText.append(line)
+        }
+        
+        // Separate each ingredient line by " : "
+        for (lineIndex, ingredientLine) in (separatedRawIngredientsText.enumerated()) {
+            let splitIngredientLine = ingredientLine.components(separatedBy: ":")
+            // Split ingredient line by character indicator
+            for (index, ingredientText) in (splitIngredientLine.enumerated()) {
+                var ingredientTextParsed: String = ""
+                if ((index % 2) != 0) {
+                    ingredientTextParsed = String(ingredientText.dropFirst())
+                    formattedIngredients = formattedIngredients + ingredientTextParsed
+                } else {
+                    ingredientTextParsed = ingredientText
+                    // Checking if first ingredient
+                    if (lineIndex == 0) {
+                        formattedIngredients = ingredientTextParsed + ":"
+                    } else {
+                        formattedIngredients = formattedIngredients + ", " + ingredientTextParsed + ":"
+                    }
+                }
+            }
+        }
+        return formattedIngredients
     }
     
     // Create recipe endpoint string from name
@@ -247,6 +281,15 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
             truncated.remove(at: truncated.index(before: truncated.endIndex))
         }
         return truncated
+    }
+}
+
+// Add the notion of a line to a string object
+extension String {
+    var lines: [String] {
+        var result: [String] = []
+        enumerateLines { line, _ in result.append(line) }
+        return result
     }
 }
 
