@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import AVFoundation
 
 class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // UI Elements
@@ -32,6 +33,8 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var OptionalTextView: UITextView!
     @IBOutlet weak var ServingsTextView: UITextView!
     @IBOutlet weak var ErrorTextLabel: UILabel!
+    @IBOutlet weak var SuccessImage: UIImageView!
+    @IBOutlet weak var CreateRecipe: UIButton!
     
     // Controller Values
     var selectedCategory: CookingCategory!
@@ -39,13 +42,12 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     var currentUser: UserProfile!
     var truncatedUserEmail: String!
     var recipeNameFirebaseFormat: String!
+    var transitionTimer: Timer = Timer()
     
     // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
-        print(parseRawIngredientsText(rawIngredientsText: IngredientsTextView.text!))
     }
     
     // Hides status bar
@@ -78,6 +80,15 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         categorySelectionIsOn = false
     }
     
+    // Starts transition timer
+    func startTransitionTimer() {
+        transitionTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(NewRecipeFullViewController.transitionView)), userInfo: nil, repeats: false)
+    }
+    
+    // Leave view after success animation plays
+    @objc func transitionView() {
+        self.performSegue(withIdentifier: "backToRecipes", sender: self)
+    }
     
     // Hide keyboard
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -124,8 +135,10 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
                 newRecipeObjRef.setValue(newRecipe.toAnyObject())
 
                 // If everything went smoothly, take the user back to the category list screen
-                // TODO: Show quick success animation/screen before segue
-                self.performSegue(withIdentifier: "backToRecipes", sender: self)
+                startTransitionTimer()
+                CreateRecipe.isHidden = true
+                SuccessImage.isHidden = false
+                AudioServicesPlaySystemSound(SystemSoundID(1022))
             }
         }
     }

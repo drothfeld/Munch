@@ -948,6 +948,10 @@ Milk: 1/3 Cup</string>
                                         <color key="textColor" red="0.91785901780000001" green="0.3576957583" blue="0.34506845470000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-recipe-success.png" translatesAutoresizingMaskIntoConstraints="NO" id="zWK-bl-qcs" userLabel="Success Image">
+                                        <rect key="frame" x="85" y="1024" width="205" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="FKM-Yx-8LQ" firstAttribute="leading" secondItem="Kqk-Qa-jrw" secondAttribute="leading" constant="25" id="1B0-DQ-zQP"/>
@@ -985,6 +989,7 @@ Milk: 1/3 Cup</string>
                         <outlet property="BreakfastCategoryButton" destination="Tc8-Lm-OVt" id="RQX-jN-q7F"/>
                         <outlet property="CategoryColorImage" destination="0Jy-4C-4xG" id="RE6-XT-7S2"/>
                         <outlet property="CategorySelectionsView" destination="gC0-SM-yyW" id="TKq-TW-v6R"/>
+                        <outlet property="CreateRecipe" destination="iWM-3Y-nlD" id="Epg-Of-AGM"/>
                         <outlet property="DessertCategoryButton" destination="4dh-CM-dKO" id="rx3-2Q-2SS"/>
                         <outlet property="DrinkCategoryButton" destination="QKE-wr-Kc3" id="KPh-Mi-RYj"/>
                         <outlet property="ErrorTextLabel" destination="Rmd-j5-muE" id="jrT-Jm-xvx"/>
@@ -1001,6 +1006,7 @@ Milk: 1/3 Cup</string>
                         <outlet property="SelectCategoryIcon" destination="HhN-kj-SHK" id="iOo-BO-IyG"/>
                         <outlet property="ServingsTextView" destination="Fge-eM-3UF" id="tYs-Rh-Iob"/>
                         <outlet property="SoupCategoryButton" destination="CDw-Vx-VtO" id="TSh-a8-duf"/>
+                        <outlet property="SuccessImage" destination="zWK-bl-qcs" id="2Ch-vT-sMy"/>
                         <outlet property="VegetarianCategoryButton" destination="a5W-KJ-D9z" id="DO7-GW-Ryl"/>
                         <segue destination="CtB-0A-mtR" kind="custom" identifier="backToRecipes" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="v0o-yZ-nhd"/>
                     </connections>
@@ -1280,6 +1286,7 @@ in this category.</string>
         <image name="instructions-icon.png" width="500" height="500"/>
         <image name="login_app_icon.png" width="512" height="512"/>
         <image name="login_button_background.png" width="300" height="100"/>
+        <image name="new-recipe-success.png" width="500" height="480"/>
         <image name="optional-icon.png" width="500" height="500"/>
         <image name="pantry-button.png" width="184" height="184"/>
         <image name="password_login_icon.png" width="264" height="265"/>
