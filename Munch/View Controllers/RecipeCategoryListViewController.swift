@@ -72,10 +72,11 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                 let recipesRef = Database.database().reference(withPath: "recipes/")
                 recipesRef.observe(.value, with: { snapshot in
                     // Parsing JSON data
+                    // NOTE: For some reason this is returning two of every item
                     for item in snapshot.children {
                         let recipe = Recipe(snapshot: item as! DataSnapshot)
                         // Making sure recipe is of the correct cooking category
-                        if (recipe.type.uppercased() == cookingCategory.name) {
+                        if (recipe.type.uppercased() == cookingCategory.name && !self.containsRecipe(recipe: recipe)) {
                             self.selectedRecipes.append(recipe)
                         }
                     }
@@ -91,6 +92,21 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                     self.refreshTable()
                 })
         }
+    }
+    
+    // Checks if a given recipe exists in the selectedRecipe array
+    func containsRecipe(recipe: Recipe) -> Bool {
+        for (index, _) in (selectedRecipes.enumerated()) {
+            if (selectedRecipes[index].name == recipe.name &&
+                selectedRecipes[index].author == recipe.author &&
+                selectedRecipes[index].ingredients == recipe.ingredients &&
+                selectedRecipes[index].instructions == recipe.instructions &&
+                selectedRecipes[index].optional == recipe.optional &&
+                selectedRecipes[index].servingSize == recipe.servingSize) {
+                    return true
+            }
+        }
+        return false
     }
     
     // Cell Data

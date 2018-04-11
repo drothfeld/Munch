@@ -113,6 +113,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
     // User presses the create recipe button
     @IBAction func CreateRecipeButtonPressed(_ sender: Any) {
         // Check if all recipe form fields are valid
+        // TODO: Need to check if recipe with given name in that category already exists
         if (!allFieldsValid()) {
             ErrorTextLabel.isHidden = false
             ErrorTextLabel.text = "Invalid field entry in recipe form"
