@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-class RecipeCategoryListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RecipeCategoryListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     // UI Elements
     @IBOutlet weak var MenuBar: UIView!
@@ -19,9 +19,13 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var NoRecipesLabel: UILabel!
     @IBOutlet weak var CreateNewRecipeBackupButton: UIButton!
     @IBOutlet weak var BackToKitchenButton: UIButton!
+    @IBOutlet weak var MenuSearchBar: UISearchBar!
     
     // Defined Values
     var selectedRecipes: [Recipe] = []
+    var sortedSelectedRecipes: [Recipe] = []
+    var filteredSelectedRecipes: [Recipe] = []
+    var isSearching = false
     var selectedCateogry: CookingCategory!
     var cookingCategory: CookingCategory? {
         didSet {
@@ -35,11 +39,40 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
         // Do any additional setup after loading the view, typically from a nib.
         interfaceSetup()
         prepare()
+        searchBarSetup()
     }
     
     // Refresh the table
     func prepare() {
         refreshTable()
+    }
+    
+    // Search Bar Setup
+    func searchBarSetup() {
+        MenuSearchBar.delegate = self
+        MenuSearchBar.returnKeyType = UIReturnKeyType.done
+    }
+    
+    // Hide keyboard activated from search bar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.MenuSearchBar.endEditing(true)
+    }
+    
+    // Sort list of recipes alphabetically by name
+    func sortRecipesAlphabetically(unsortedList: Array<Recipe>) -> Array<Recipe> {
+        return unsortedList.sorted { $0.name < $1.name }
+    }
+    
+    // Search Bar Functionality
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (MenuSearchBar.text == nil || MenuSearchBar.text == "") {
+            isSearching = false
+            view.endEditing(true)
+        } else {
+            isSearching = true
+            filteredSelectedRecipes = sortedSelectedRecipes.filter( {$0.name.lowercased().contains(MenuSearchBar.text!.lowercased())} )
+        }
+        RecipeTableView.reloadData()
     }
     
     // Showing and hiding menu bar when user is/isn't scrolling
@@ -64,9 +97,12 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                 selectedCateogry = cookingCategory
                 // Setting menu bar text header
                 if let MenuBarCategoryText = MenuBarCategoryText,
-                    let MenuBar = MenuBar {
+                    let MenuBar = MenuBar,
+                    let MenuSearchBar = MenuSearchBar {
                     MenuBarCategoryText.text = cookingCategory.name
                     MenuBar.center = CGPoint(x: 187.5, y: -28.0)
+                    let searchBarTextField = MenuSearchBar.value(forKey: "searchField") as? UITextField
+                    searchBarTextField?.textColor = UIColor.white
                 }
                 // Getting recipes JSON object
                 let recipesRef = Database.database().reference(withPath: "recipes/")
@@ -112,26 +148,45 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     // Cell Data
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(selectedRecipes)
-        
-        // Defining cell attribute
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-        cell.backgroundColor = selectedCateogry.color
-        cell.textLabel?.font = UIFont(name: "Lato-Bold", size: 20.0)
-        cell.detailTextLabel?.text = ""
-        cell.textLabel?.text = "     " + selectedRecipes[indexPath.item].name
-        
-        // Changing accessory type attributes
-        cell.tintColor = UIColor.white
-        let image = UIImage(named:"cell-selection-icon.png")?.withRenderingMode(.alwaysTemplate)
-        let checkmark  = UIImageView(frame:CGRect(x:0, y:0, width:((image?.size.width)!/25), height:((image?.size.height)!/25)));
-        checkmark.image = image
-        cell.accessoryView = checkmark
+
+        if (isSearching) {
+            // Defining cell attribute
+            cell.backgroundColor = selectedCateogry.color
+            cell.textLabel?.font = UIFont(name: "Lato-Bold", size: 20.0)
+            cell.detailTextLabel?.text = ""
+            cell.textLabel?.text = "     " + filteredSelectedRecipes[indexPath.item].name
+            
+            // Changing accessory type attributes
+            cell.tintColor = UIColor.white
+            let image = UIImage(named:"cell-selection-icon.png")?.withRenderingMode(.alwaysTemplate)
+            let checkmark  = UIImageView(frame:CGRect(x:0, y:0, width:((image?.size.width)!/25), height:((image?.size.height)!/25)));
+            checkmark.image = image
+            cell.accessoryView = checkmark
+            
+        } else {
+            // Defining cell attribute
+            cell.backgroundColor = selectedCateogry.color
+            cell.textLabel?.font = UIFont(name: "Lato-Bold", size: 20.0)
+            cell.detailTextLabel?.text = ""
+            cell.textLabel?.text = "     " + sortedSelectedRecipes[indexPath.item].name
+            
+            // Changing accessory type attributes
+            cell.tintColor = UIColor.white
+            let image = UIImage(named:"cell-selection-icon.png")?.withRenderingMode(.alwaysTemplate)
+            let checkmark  = UIImageView(frame:CGRect(x:0, y:0, width:((image?.size.width)!/25), height:((image?.size.height)!/25)));
+            checkmark.image = image
+            cell.accessoryView = checkmark
+        }
         
         return cell
     }
     
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (isSearching) {
+            return filteredSelectedRecipes.count
+        }
         return selectedRecipes.count
     }
     
@@ -142,6 +197,7 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     
     // Table Refresh
     func refreshTable() {
+        sortedSelectedRecipes = sortRecipesAlphabetically(unsortedList: selectedRecipes)
         self.RecipeTableView.reloadData()
     }
     
