@@ -46,13 +46,13 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if(velocity.y>0) {
             UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.MenuBar.center = CGPoint(x: 187.5, y: -25.0)
+                self.MenuBar.center = CGPoint(x: 187.5, y: -28.0)
                 //                print("Hide")
             }, completion: nil)
             
         } else {
             UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
-                self.MenuBar.center = CGPoint(x: 187.5, y: 25.0)
+                self.MenuBar.center = CGPoint(x: 187.5, y: 28.0)
                 //                print("Unhide")
             }, completion: nil)
         }
@@ -66,7 +66,7 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
                 if let MenuBarCategoryText = MenuBarCategoryText,
                     let MenuBar = MenuBar {
                     MenuBarCategoryText.text = cookingCategory.name
-                    MenuBar.center = CGPoint(x: 187.5, y: -25.0)
+                    MenuBar.center = CGPoint(x: 187.5, y: -28.0)
                 }
                 // Getting recipes JSON object
                 let recipesRef = Database.database().reference(withPath: "recipes/")
