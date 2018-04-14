@@ -1282,11 +1282,27 @@ in this category.</string>
                         <outlet property="MenuSearchBar" destination="GSF-9m-FHm" id="kXH-Ql-SwA"/>
                         <outlet property="NoRecipesLabel" destination="etZ-nq-8ZT" id="8f0-Q9-DZj"/>
                         <outlet property="RecipeTableView" destination="R3G-UQ-Qy3" id="Mff-Aa-7VA"/>
+                        <segue destination="3rz-lk-rqR" kind="custom" identifier="viewRecipe" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="fax-K8-xMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133.5999999999999" y="-1600.7496251874063"/>
+        </scene>
+        <!--Single Recipe View Controller-->
+        <scene sceneID="e5C-j8-zVO">
+            <objects>
+                <viewController id="3rz-lk-rqR" customClass="SingleRecipeViewController" customModule="Munch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DeP-Zz-3RJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g2O-Co-WEw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y89-nM-cAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="-1602"/>
         </scene>
     </scenes>
     <resources>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2736B5FDE782474D229D52FF /* Pods_Munch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7146E65128077996D5CE157 /* Pods_Munch.framework */; };
 		B01A26CA207C4DB500E16D18 /* new-recipe-success.png in Resources */ = {isa = PBXBuildFile; fileRef = B01A26C9207C4DB500E16D18 /* new-recipe-success.png */; };
+		B0253386208180B9005EF05B /* SingleRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0253385208180B9005EF05B /* SingleRecipeViewController.swift */; };
 		B02689A4205861CD0059179A /* drinks-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B026899C205861CD0059179A /* drinks-icon.png */; };
 		B02689A5205861CD0059179A /* breakfast-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B026899D205861CD0059179A /* breakfast-icon.png */; };
 		B02689A6205861CD0059179A /* poultry-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B026899E205861CD0059179A /* poultry-icon.png */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		849FDCB9F6529C7B18E939C7 /* Pods-Munch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Munch/Pods-Munch.release.xcconfig"; sourceTree = "<group>"; };
 		B01A26C9207C4DB500E16D18 /* new-recipe-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-recipe-success.png"; sourceTree = "<group>"; };
+		B0253385208180B9005EF05B /* SingleRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewController.swift; sourceTree = "<group>"; };
 		B026899C205861CD0059179A /* drinks-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drinks-icon.png"; sourceTree = "<group>"; };
 		B026899D205861CD0059179A /* breakfast-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "breakfast-icon.png"; sourceTree = "<group>"; };
 		B026899E205861CD0059179A /* poultry-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poultry-icon.png"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				B02ACF90205CA8FC00D8953B /* NewRecipeSelection.swift */,
 				B09DFCEE2065780C0037AFD7 /* RecipeCategoryListViewController.swift */,
 				B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */,
+				B0253385208180B9005EF05B /* SingleRecipeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B053C9C4206AD143001E0411 /* NewRecipeFullViewController.swift in Sources */,
+				B0253386208180B9005EF05B /* SingleRecipeViewController.swift in Sources */,
 				B02ACF91205CA8FC00D8953B /* NewRecipeSelection.swift in Sources */,
 				B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */,
 				B0580E69204F50C400AF67BD /* NewUserViewController.swift in Sources */,
