@@ -17,6 +17,11 @@ class SingleRecipeViewController: UIViewController {
             interfaceSetup()
         }
     }
+    var cookingCategory: CookingCategory? {
+        didSet {
+            interfaceSetup()
+        }
+    }
     
     // Onload
     override func viewDidLoad() {
@@ -27,8 +32,17 @@ class SingleRecipeViewController: UIViewController {
     
     // Setting up view
     func interfaceSetup() {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         if let selectedRecipe = selectedRecipe {
         }
+        if let cookingCategory = cookingCategory {
+        }
+    }
+    
+    // Sending back the cooking category the user was in
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! RecipeCategoryListViewController
+        controller.cookingCategory = cookingCategory
     }
     
     // Hides status bar

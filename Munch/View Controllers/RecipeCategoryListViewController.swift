@@ -58,6 +58,7 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
             }
             let controller = segue.destination as! SingleRecipeViewController
             controller.selectedRecipe = selectedRecipe
+            controller.cookingCategory = cookingCategory
         }
     }
     
