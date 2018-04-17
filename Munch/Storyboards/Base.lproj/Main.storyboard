@@ -1166,6 +1166,9 @@ FULL
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3rz-lk-rqR" kind="custom" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="NGx-mZ-WCw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1282,7 +1285,6 @@ in this category.</string>
                         <outlet property="MenuSearchBar" destination="GSF-9m-FHm" id="kXH-Ql-SwA"/>
                         <outlet property="NoRecipesLabel" destination="etZ-nq-8ZT" id="8f0-Q9-DZj"/>
                         <outlet property="RecipeTableView" destination="R3G-UQ-Qy3" id="Mff-Aa-7VA"/>
-                        <segue destination="3rz-lk-rqR" kind="custom" identifier="viewRecipe" customClass="SegueFromRight" customModule="Munch" customModuleProvider="target" id="fax-K8-xMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-4I-kqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1302,7 +1304,7 @@ in this category.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y89-nM-cAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="-1602"/>
+            <point key="canvasLocation" x="2108" y="-1602"/>
         </scene>
     </scenes>
     <resources>

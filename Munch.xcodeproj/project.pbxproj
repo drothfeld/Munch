@@ -187,8 +187,8 @@
 				B0B13AA3205832040013C38B /* KitchenViewController.swift */,
 				B02ACF90205CA8FC00D8953B /* NewRecipeSelection.swift */,
 				B09DFCEE2065780C0037AFD7 /* RecipeCategoryListViewController.swift */,
-				B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */,
 				B0253385208180B9005EF05B /* SingleRecipeViewController.swift */,
+				B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

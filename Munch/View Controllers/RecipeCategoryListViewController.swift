@@ -47,6 +47,20 @@ class RecipeCategoryListViewController: UIViewController, UITableViewDataSource,
         refreshTable()
     }
     
+    // Choosing specific recipe to view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = RecipeTableView.indexPathForSelectedRow {
+            let selectedRecipe: Recipe
+            if (isSearching) {
+                selectedRecipe = filteredSelectedRecipes[indexPath.row]
+            } else {
+                selectedRecipe = sortedSelectedRecipes[indexPath.row]
+            }
+            let controller = segue.destination as! SingleRecipeViewController
+            controller.selectedRecipe = selectedRecipe
+        }
+    }
+    
     // Search Bar Setup
     func searchBarSetup() {
         MenuSearchBar.delegate = self

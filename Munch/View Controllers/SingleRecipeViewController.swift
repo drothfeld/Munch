@@ -11,12 +11,24 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class SingleRecipeViewController: UIViewController {
+    // Defined Values
+    var selectedRecipe: Recipe? {
+        didSet {
+            interfaceSetup()
+        }
+    }
     
     // Onload
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //interfaceSetup()
+    }
+    
+    // Setting up view
+    func interfaceSetup() {
+        if let selectedRecipe = selectedRecipe {
+        }
     }
     
     // Hides status bar
