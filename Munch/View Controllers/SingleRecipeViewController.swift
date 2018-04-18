@@ -11,6 +11,12 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class SingleRecipeViewController: UIViewController {
+    // UI Elements
+    @IBOutlet weak var MenuBarHeaderText: UILabel!
+    @IBOutlet weak var DeleteRecipeButton: UIButton!
+    @IBOutlet weak var RecipeNameLabel: UILabel!
+    @IBOutlet weak var RecipeCategoryLabel: UILabel!
+    
     // Defined Values
     var selectedRecipe: Recipe? {
         didSet {
@@ -33,9 +39,14 @@ class SingleRecipeViewController: UIViewController {
     // Setting up view
     func interfaceSetup() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
-        if let selectedRecipe = selectedRecipe {
-        }
-        if let cookingCategory = cookingCategory {
+        if let selectedRecipe = selectedRecipe, let cookingCategory = cookingCategory {
+            if let DeleteRecipeButton = DeleteRecipeButton,
+            let RecipeNameLabel = RecipeNameLabel,
+            let RecipeCategoryLabel = RecipeCategoryLabel {
+                RecipeNameLabel.text = selectedRecipe.name
+                RecipeCategoryLabel.text = cookingCategory.name.uppercased()
+                RecipeCategoryLabel.backgroundColor = cookingCategory.color
+            }
         }
     }
     
