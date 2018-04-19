@@ -50,15 +50,14 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         // Check if a user with the given username already exists
         let database = Database.database().reference()
         database.child("Users").observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
-            print(snapshot)
             
             // User already exists
 //            if snapshot.hasChild(Auth.auth().currentUser!.uid) {
             if (5 < 1) {
                 // TODO: IS NOT PROPERLY WORKING
-                self.errorMessageLabel.isHidden = false
-                self.errorMessageLabel.text = "That username is already in use"
-                self.invalidLoginCredentials = true
+//                self.errorMessageLabel.isHidden = false
+//                self.errorMessageLabel.text = "That username is already in use"
+//                self.invalidLoginCredentials = true
             }
                 
             // Validate create account fields

@@ -131,9 +131,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
                 let newRecipe = Recipe(name: self.RecipeNameTextField.text!, isQuickSnapShot: "false", type: selectedCategory.name.lowercased().capitalized, ingredients: parseRawIngredientsText(rawIngredientsText: IngredientsTextView.text!), instructions: InstructionsTextView.text!, optional: OptionalTextView.text!, servingSize: ServingsTextView.text!, author: truncatedUserEmail)
 
                 let newRecipeRef = recipeRef.child(createRecipeEndpoint(originalNameText: self.RecipeNameTextField.text!))
-                newRecipeRef.setValue("name")
-                let newRecipeObjRef = Database.database().reference(withPath: "recipes/" + createRecipeEndpoint(originalNameText: self.RecipeNameTextField.text!))
-                newRecipeObjRef.setValue(newRecipe.toAnyObject())
+                newRecipeRef.setValue(newRecipe.toAnyObject())
 
                 // If everything went smoothly, take the user back to the category list screen
                 startTransitionTimer()
