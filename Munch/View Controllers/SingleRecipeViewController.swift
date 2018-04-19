@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import AVFoundation
 
 class SingleRecipeViewController: UIViewController {
     // UI Elements
@@ -16,9 +17,18 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var DeleteRecipeButton: UIButton!
     @IBOutlet weak var RecipeNameLabel: UILabel!
     @IBOutlet weak var RecipeCategoryLabel: UILabel!
+    @IBOutlet weak var DeleteMenuView: UIView!
+    @IBOutlet weak var FadeScreenOverlay: UIImageView!
+    @IBOutlet weak var SuccessImage: UIImageView!
+    @IBOutlet weak var DeleteWarningMessage: UILabel!
+    @IBOutlet weak var YesDeleteButton: UIButton!
+    @IBOutlet weak var CancelDeleteButton: UIButton!
+    @IBOutlet weak var RecipeWasDeletedMessage: UILabel!
     
     // Defined Values
     var truncatedUserEmail: String!
+    var isDeleteMenuVisible: Bool = false
+    var transitionTimer: Timer = Timer()
     var selectedRecipe: Recipe? {
         didSet {
             interfaceSetup()
@@ -77,6 +87,21 @@ class SingleRecipeViewController: UIViewController {
     
     // Creator of a recipe presses the delete recipe button
     @IBAction func deleteRecipeButtonPressed(_ sender: Any) {
+        // If user was already at the delete menu, then hide it
+        if (isDeleteMenuVisible) {
+            isDeleteMenuVisible = false
+            FadeScreenOverlay.isHidden = true
+            DeleteMenuView.isHidden = true
+            
+        } else {
+            isDeleteMenuVisible = true
+            FadeScreenOverlay.isHidden = false
+            DeleteMenuView.isHidden = false
+        }
+    }
+    
+    // User confirms they want to delete the recipe
+    @IBAction func deleteRecipe(_ sender: Any) {
         // Unwrap optional and extract recipe API endpoint
         if let selectedRecipe = selectedRecipe {
             var recipeEndpoint: String = ""
@@ -92,6 +117,32 @@ class SingleRecipeViewController: UIViewController {
             let recipeRef = Database.database().reference(withPath: "recipes/" + recipeEndpoint)
             recipeRef.removeValue()
         }
+        
+        // Show success image and play delete sound/image
+        startTransitionTimer()
+        DeleteWarningMessage.isHidden = true
+        RecipeWasDeletedMessage.isHidden = false
+        YesDeleteButton.isHidden = true
+        CancelDeleteButton.isHidden = true
+        SuccessImage.isHidden = false
+        AudioServicesPlaySystemSound(SystemSoundID(1116))
+    }
+    
+    // User cancels deleting a recipe
+    @IBAction func cancelDeleteRecipe(_ sender: Any) {
+        isDeleteMenuVisible = false
+        FadeScreenOverlay.isHidden = true
+        DeleteMenuView.isHidden = true
+    }
+    
+    // Starts transition timer
+    func startTransitionTimer() {
+        transitionTimer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: (#selector(SingleRecipeViewController.transitionView)), userInfo: nil, repeats: false)
+    }
+    
+    // Leave view after success animation plays
+    @objc func transitionView() {
+        self.performSegue(withIdentifier: "backToCategory", sender: self)
     }
     
     // Hides status bar
