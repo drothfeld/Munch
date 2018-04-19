@@ -75,6 +75,25 @@ class SingleRecipeViewController: UIViewController {
         controller.cookingCategory = cookingCategory
     }
     
+    // Creator of a recipe presses the delete recipe button
+    @IBAction func deleteRecipeButtonPressed(_ sender: Any) {
+        // Unwrap optional and extract recipe API endpoint
+        if let selectedRecipe = selectedRecipe {
+            var recipeEndpoint: String = ""
+            let characters = Array(selectedRecipe.name.lowercased())
+            for char in characters {
+                if (char == " ") {
+                    recipeEndpoint = recipeEndpoint + "-"
+                } else {
+                    recipeEndpoint = recipeEndpoint + String(char)
+                }
+            }
+            // Deleting database entry
+            let recipeRef = Database.database().reference(withPath: "recipes/" + recipeEndpoint)
+            recipeRef.removeValue()
+        }
+    }
+    
     // Hides status bar
     override var prefersStatusBarHidden: Bool{
         return true

@@ -1326,6 +1326,10 @@ in this category.</string>
                                         <state key="normal" image="delete-icon.png">
                                             <color key="titleColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteRecipeButtonPressed:" destination="3rz-lk-rqR" eventType="touchUpInside" id="ZiJ-Mn-mVf"/>
+                                            <segue destination="p7M-s1-kNP" kind="custom" customClass="SegueFromLeft" customModule="Munch" customModuleProvider="target" id="BfD-sQ-OFt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
