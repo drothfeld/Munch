@@ -18,6 +18,7 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var RecipeCategoryLabel: UILabel!
     
     // Defined Values
+    var truncatedUserEmail: String!
     var selectedRecipe: Recipe? {
         didSet {
             interfaceSetup()
@@ -46,8 +47,26 @@ class SingleRecipeViewController: UIViewController {
                 RecipeNameLabel.text = selectedRecipe.name
                 RecipeCategoryLabel.text = cookingCategory.name.uppercased()
                 RecipeCategoryLabel.backgroundColor = cookingCategory.color
+                
+                // Getting info of the currently logged in user
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    truncatedUserEmail = stripDotCom(username: user.email!)
+                    if (selectedRecipe.author == truncatedUserEmail) {
+                        DeleteRecipeButton.isHidden = false
+                    }
+                }
             }
         }
+    }
+    
+    // Strip the ".com" from a string
+    func stripDotCom(username: String) -> String {
+        var truncated = username
+        for _ in 1...4 {
+            truncated.remove(at: truncated.index(before: truncated.endIndex))
+        }
+        return truncated
     }
     
     // Sending back the cooking category the user was in
