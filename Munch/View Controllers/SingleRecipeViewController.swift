@@ -30,6 +30,7 @@ class SingleRecipeViewController: UIViewController {
     var truncatedUserEmail: String!
     var isDeleteMenuVisible: Bool = false
     var transitionTimer: Timer = Timer()
+    var ingredientList: [(name: String, amount: String, inStock: String)] = []
     var selectedRecipe: Recipe? {
         didSet {
             interfaceSetup()
@@ -55,6 +56,8 @@ class SingleRecipeViewController: UIViewController {
             if let DeleteRecipeButton = DeleteRecipeButton,
             let RecipeNameLabel = RecipeNameLabel,
             let RecipeCategoryLabel = RecipeCategoryLabel {
+                
+                // Assigning static values
                 RecipeNameLabel.text = selectedRecipe.name
                 RecipeCategoryLabel.text = cookingCategory.name.uppercased()
                 RecipeCategoryLabel.backgroundColor = cookingCategory.color
@@ -62,9 +65,33 @@ class SingleRecipeViewController: UIViewController {
                 // Getting info of the currently logged in user
                 let user = Auth.auth().currentUser
                 if let user = user {
+                    
+                    // Checking if the current user is the creator of the recipe
                     truncatedUserEmail = stripDotCom(username: user.email!)
                     if (selectedRecipe.author == truncatedUserEmail) {
                         DeleteRecipeButton.isHidden = false
+                    }
+                    
+                    // Setting up ingredient tuple array
+                    let rawIngredientsText: String = selectedRecipe.ingredients
+                    let splitIngredients = rawIngredientsText.components(separatedBy: ",")
+                    // Main loop to go through each ingredient
+                    for (ingredientIndex, ingredient) in (splitIngredients.enumerated()) {
+                        var ingredientText: String = ingredient
+                        // Drop the extra space for non-first ingredients
+                        if (ingredientIndex != 0) {
+                            ingredientText = String(ingredient.dropFirst())
+                        }
+                        let splitIngredientText = ingredientText.components(separatedBy: ":")
+                        for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
+                            // Handle the ingredient name
+                            // TODO: Need to grab users food-stock from database and check if they have ingredient
+                            if (ingredientPart == 0) {
+                            }
+                            // Handle the ingredient amount
+                            else if (ingredientPart == 1) {
+                            }
+                        }
                     }
                 }
             }

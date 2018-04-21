@@ -1399,7 +1399,7 @@ in this category.</string>
                                                 </subviews>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-qh-OfF" userLabel="Ingredient Row View">
-                                                <rect key="frame" x="0.0" y="71" width="310" height="30"/>
+                                                <rect key="frame" x="0.0" y="72" width="310" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cane Sugar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sq-YF-ujY" userLabel="Ingredient Name">
@@ -1424,12 +1424,12 @@ in this category.</string>
                                             </view>
                                         </subviews>
                                     </view>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ub0-ZD-tkl" userLabel="Fade Screen Overlay">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ub0-ZD-tkl" userLabel="Fade Screen Overlay">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-If-5Sz" userLabel="Delete Check View">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-If-5Sz" userLabel="Delete Check View">
                                         <rect key="frame" x="47" y="54" width="280" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -1491,6 +1491,12 @@ to delete this recipe?</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Ub0-ZD-tkl"/>
+                                        <exclude reference="NiM-If-5Sz"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.33333333333333331" green="0.34901960784313724" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
