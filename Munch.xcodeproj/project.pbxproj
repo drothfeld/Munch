@@ -30,6 +30,7 @@
 		B02ACF94205CAE4300D8953B /* quick-recipe-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02ACF92205CAE4200D8953B /* quick-recipe-icon.png */; };
 		B02ACF97205CAF9100D8953B /* full-recipe-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B02ACF96205CAF9100D8953B /* full-recipe-icon.png */; };
 		B02E97BB205221850000AB47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02E97BA205221850000AB47 /* HomeViewController.swift */; };
+		B04AAE83208AB97800D243C1 /* missing-ingredient-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B04AAE82208AB97700D243C1 /* missing-ingredient-icon.png */; };
 		B053C9C4206AD143001E0411 /* NewRecipeFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */; };
 		B053C9C6206C2730001E0411 /* recipe-name-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B053C9C5206C2730001E0411 /* recipe-name-icon.png */; };
 		B053C9C8206D5E12001E0411 /* question-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B053C9C7206D5E11001E0411 /* question-icon.png */; };
@@ -104,6 +105,7 @@
 		B02ACF92205CAE4200D8953B /* quick-recipe-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quick-recipe-icon.png"; sourceTree = "<group>"; };
 		B02ACF96205CAF9100D8953B /* full-recipe-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full-recipe-icon.png"; sourceTree = "<group>"; };
 		B02E97BA205221850000AB47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B04AAE82208AB97700D243C1 /* missing-ingredient-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missing-ingredient-icon.png"; sourceTree = "<group>"; };
 		B053C9C3206AD143001E0411 /* NewRecipeFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeFullViewController.swift; sourceTree = "<group>"; };
 		B053C9C5206C2730001E0411 /* recipe-name-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recipe-name-icon.png"; sourceTree = "<group>"; };
 		B053C9C7206D5E11001E0411 /* question-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-icon.png"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		B0A410D4204CF28100341042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B04AAE82208AB97700D243C1 /* missing-ingredient-icon.png */,
 				B015A3D7208678C7005E8B1B /* delete-icon.png */,
 				B01A26C9207C4DB500E16D18 /* new-recipe-success.png */,
 				B0BA0E0D207534AE00F90823 /* optional-icon.png */,
@@ -423,6 +426,7 @@
 				B02ACF97205CAF9100D8953B /* full-recipe-icon.png in Resources */,
 				B0A410F0204CF3C000341042 /* Lato-Thin.ttf in Resources */,
 				B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */,
+				B04AAE83208AB97800D243C1 /* missing-ingredient-icon.png in Resources */,
 				B02ACF8F205CA68200D8953B /* back-home-button.png in Resources */,
 				B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */,
 				B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */,

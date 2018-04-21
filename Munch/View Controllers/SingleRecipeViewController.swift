@@ -24,6 +24,7 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var YesDeleteButton: UIButton!
     @IBOutlet weak var CancelDeleteButton: UIButton!
     @IBOutlet weak var RecipeWasDeletedMessage: UILabel!
+    @IBOutlet weak var RecipeIngredientsView: UIView!
     
     // Defined Values
     var truncatedUserEmail: String!
