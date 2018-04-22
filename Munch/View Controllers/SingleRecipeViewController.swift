@@ -87,6 +87,13 @@ class SingleRecipeViewController: UIViewController {
                             // Handle the ingredient name
                             // TODO: Need to grab users food-stock from database and check if they have ingredient
                             if (ingredientPart == 0) {
+                                // Creating ingredient row view
+                                let row = UIView(frame: CGRect(x: 0, y: 36*ingredientIndex, width: 310, height: 30))
+                                row.backgroundColor = UIColor.black
+                                RecipeIngredientsView.addSubview(row)
+                                // Creating ingredient text in row
+                                //let ingredientName = UILabel(frame: CGRect(x: <#T##Int#>, y: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>))
+                                
                             }
                             // Handle the ingredient amount
                             else if (ingredientPart == 1) {
