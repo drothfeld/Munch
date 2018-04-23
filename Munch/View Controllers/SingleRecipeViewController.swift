@@ -75,28 +75,49 @@ class SingleRecipeViewController: UIViewController {
                     // Setting up ingredient tuple array
                     let rawIngredientsText: String = selectedRecipe.ingredients
                     let splitIngredients = rawIngredientsText.components(separatedBy: ",")
+                    
                     // Main loop to go through each ingredient
                     for (ingredientIndex, ingredient) in (splitIngredients.enumerated()) {
                         var ingredientText: String = ingredient
+                        
                         // Drop the extra space for non-first ingredients
                         if (ingredientIndex != 0) {
                             ingredientText = String(ingredient.dropFirst())
                         }
                         let splitIngredientText = ingredientText.components(separatedBy: ":")
+                        
+                        // Creating ingredient row view
+                        let row = UIView(frame: CGRect(x: 0, y: 36*(ingredientIndex + 1), width: 310, height: 30))
+                        row.backgroundColor = UIColor.clear
+                        RecipeIngredientsView.addSubview(row)
+                        
+                        // Going through single ingredients details
                         for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
+                            
                             // Handle the ingredient name
-                            // TODO: Need to grab users food-stock from database and check if they have ingredient
                             if (ingredientPart == 0) {
-                                // Creating ingredient row view
-                                let row = UIView(frame: CGRect(x: 0, y: 36*ingredientIndex, width: 310, height: 30))
-                                row.backgroundColor = UIColor.black
-                                RecipeIngredientsView.addSubview(row)
-                                // Creating ingredient text in row
-                                //let ingredientName = UILabel(frame: CGRect(x: <#T##Int#>, y: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>))
+                                // Creating ingredient name text in row
+                                let ingredientName = UILabel(frame: CGRect(x: 8, y: 0, width: 174, height: 30))
+                                ingredientName.font = UIFont(name: "Lato-Light", size: 15.0)
+                                ingredientName.textColor = UIColor.white
+                                ingredientName.text = ingredientPartText
+                                row.addSubview(ingredientName)
                                 
+                                // Handle the ingredient inStock icon
+                                // TODO: Need to grab users food-stock from database and check if they have ingredient
+                                let ingredientImage = UIImageView(frame: CGRect(x: 280, y: 0, width: 30, height: 30))
+                                ingredientImage.alpha = 0.8
+                                ingredientImage.image = #imageLiteral(resourceName: "missing-ingredient-icon.png") // PLACEHOLDER
+                                row.addSubview(ingredientImage)
                             }
                             // Handle the ingredient amount
                             else if (ingredientPart == 1) {
+                                // Creating ingredient amount text in row
+                                let ingredientAmount = UILabel(frame: CGRect(x: 190, y: 0, width: 78, height: 30))
+                                ingredientAmount.font = UIFont(name: "Lato-Light", size: 15.0)
+                                ingredientAmount.textColor = UIColor.white
+                                ingredientAmount.text = ingredientPartText
+                                row.addSubview(ingredientAmount)
                             }
                         }
                     }
