@@ -26,7 +26,8 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var RecipeWasDeletedMessage: UILabel!
     @IBOutlet weak var RecipeIngredientsView: UIView!
     @IBOutlet weak var RecipeInstructionsView: UIView!
-    
+    @IBOutlet weak var RecipeOptionalView: UIView!
+    @IBOutlet weak var RecipeOptionalText: UITextView!
     @IBOutlet weak var RecipeInstructionsText: UITextView!
     // Defined Values
     var truncatedUserEmail: String!
@@ -64,6 +65,7 @@ class SingleRecipeViewController: UIViewController {
                 RecipeCategoryLabel.text = cookingCategory.name.uppercased()
                 RecipeCategoryLabel.backgroundColor = cookingCategory.color
                 RecipeInstructionsText.text = selectedRecipe.instructions
+                RecipeOptionalText.text = selectedRecipe.optional
                 
                 // Getting info of the currently logged in user
                 let user = Auth.auth().currentUser
@@ -99,6 +101,8 @@ class SingleRecipeViewController: UIViewController {
                         // when ingredients amount varies in size
                         RecipeIngredientsView.frame = CGRect(x: RecipeIngredientsView.frame.origin.x, y: RecipeIngredientsView.frame.origin.y, width: RecipeIngredientsView.frame.width, height: RecipeIngredientsView.frame.height + 30)
                         RecipeInstructionsView.frame = CGRect(x: RecipeInstructionsView.frame.origin.x, y: RecipeInstructionsView.frame.origin.y + 30, width: RecipeInstructionsView.frame.width, height: RecipeInstructionsView.frame.height)
+                        RecipeOptionalView.frame = CGRect(x: RecipeOptionalView.frame.origin.x, y: RecipeOptionalView.frame.origin.y + 30, width: RecipeOptionalView.frame.width, height: RecipeOptionalView.frame.height)
+                        
                         
                         // Going through single ingredients details
                         for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
