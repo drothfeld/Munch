@@ -25,7 +25,9 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var CancelDeleteButton: UIButton!
     @IBOutlet weak var RecipeWasDeletedMessage: UILabel!
     @IBOutlet weak var RecipeIngredientsView: UIView!
+    @IBOutlet weak var RecipeInstructionsView: UIView!
     
+    @IBOutlet weak var RecipeInstructionsText: UITextView!
     // Defined Values
     var truncatedUserEmail: String!
     var isDeleteMenuVisible: Bool = false
@@ -61,6 +63,7 @@ class SingleRecipeViewController: UIViewController {
                 RecipeNameLabel.text = selectedRecipe.name
                 RecipeCategoryLabel.text = cookingCategory.name.uppercased()
                 RecipeCategoryLabel.backgroundColor = cookingCategory.color
+                RecipeInstructionsText.text = selectedRecipe.instructions
                 
                 // Getting info of the currently logged in user
                 let user = Auth.auth().currentUser
@@ -90,6 +93,12 @@ class SingleRecipeViewController: UIViewController {
                         let row = UIView(frame: CGRect(x: 0, y: 36*(ingredientIndex + 1), width: 310, height: 30))
                         row.backgroundColor = UIColor.clear
                         RecipeIngredientsView.addSubview(row)
+                        
+                        // Updating view frame positions
+                        // TODO: Need to fix inconsistant spacing between ingredients view and instructions view
+                        // when ingredients amount varies in size
+                        RecipeIngredientsView.frame = CGRect(x: RecipeIngredientsView.frame.origin.x, y: RecipeIngredientsView.frame.origin.y, width: RecipeIngredientsView.frame.width, height: RecipeIngredientsView.frame.height + 30)
+                        RecipeInstructionsView.frame = CGRect(x: RecipeInstructionsView.frame.origin.x, y: RecipeInstructionsView.frame.origin.y + 30, width: RecipeInstructionsView.frame.width, height: RecipeInstructionsView.frame.height)
                         
                         // Going through single ingredients details
                         for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
