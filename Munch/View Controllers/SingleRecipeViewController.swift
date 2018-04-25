@@ -29,6 +29,9 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var RecipeOptionalView: UIView!
     @IBOutlet weak var RecipeOptionalText: UITextView!
     @IBOutlet weak var RecipeInstructionsText: UITextView!
+    @IBOutlet weak var RecipeServingsView: UIView!
+    @IBOutlet weak var RecipeServingsText: UITextView!
+    
     // Defined Values
     var truncatedUserEmail: String!
     var isDeleteMenuVisible: Bool = false
@@ -66,6 +69,7 @@ class SingleRecipeViewController: UIViewController {
                 RecipeCategoryLabel.backgroundColor = cookingCategory.color
                 RecipeInstructionsText.text = selectedRecipe.instructions
                 RecipeOptionalText.text = selectedRecipe.optional
+                RecipeServingsText.text = selectedRecipe.servingSize
                 
                 // Getting info of the currently logged in user
                 let user = Auth.auth().currentUser
@@ -102,7 +106,7 @@ class SingleRecipeViewController: UIViewController {
                         RecipeIngredientsView.frame = CGRect(x: RecipeIngredientsView.frame.origin.x, y: RecipeIngredientsView.frame.origin.y, width: RecipeIngredientsView.frame.width, height: RecipeIngredientsView.frame.height + 30)
                         RecipeInstructionsView.frame = CGRect(x: RecipeInstructionsView.frame.origin.x, y: RecipeInstructionsView.frame.origin.y + 30, width: RecipeInstructionsView.frame.width, height: RecipeInstructionsView.frame.height)
                         RecipeOptionalView.frame = CGRect(x: RecipeOptionalView.frame.origin.x, y: RecipeOptionalView.frame.origin.y + 30, width: RecipeOptionalView.frame.width, height: RecipeOptionalView.frame.height)
-                        
+                        RecipeServingsView.frame = CGRect(x: RecipeServingsView.frame.origin.x, y: RecipeServingsView.frame.origin.y + 30, width: RecipeServingsView.frame.width, height: RecipeServingsView.frame.height)
                         
                         // Going through single ingredients details
                         for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {

@@ -1455,6 +1455,33 @@ in this category.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usB-al-UOY" userLabel="Recipe Servings View">
+                                                <rect key="frame" x="32" y="430" width="310" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYf-ew-fVo" userLabel="Section Line">
+                                                        <rect key="frame" x="0.0" y="8" width="310" height="1"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Servings Size:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6w-hm-d7i" userLabel="Servings Header Label">
+                                                        <rect key="frame" x="2" y="14" width="306" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-5F-s3E" userLabel="Servings Text">
+                                                        <rect key="frame" x="8" y="44" width="294" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="850" id="ZVW-Kb-jrv"/>
@@ -1564,6 +1591,8 @@ to delete this recipe?</string>
                         <outlet property="RecipeNameLabel" destination="iBf-sA-OYl" id="3Qn-Hd-dbT"/>
                         <outlet property="RecipeOptionalText" destination="rdd-Is-YdM" id="pNW-hu-3Ph"/>
                         <outlet property="RecipeOptionalView" destination="iwz-Fc-EYX" id="XN9-1H-hgv"/>
+                        <outlet property="RecipeServingsText" destination="l2X-5F-s3E" id="9EX-WB-uY9"/>
+                        <outlet property="RecipeServingsView" destination="usB-al-UOY" id="nCp-wj-0oE"/>
                         <outlet property="RecipeWasDeletedMessage" destination="pWh-vE-LUs" id="RbV-E0-kta"/>
                         <outlet property="SuccessImage" destination="zaQ-n3-XlB" id="kOb-3u-CQB"/>
                         <outlet property="YesDeleteButton" destination="SzI-FU-I1g" id="NRP-st-FkQ"/>
