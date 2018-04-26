@@ -153,6 +153,7 @@ class HomeViewController: UIViewController {
         var colors: [UIColor] = []
         var color: UIColor
         for i in 0..<total {
+            // TODO: Fix bug that crashes the application when the user has more than 9 food items.
             if (foodCountPercentages[i] > percentageThreshold) {
                 switch (i) {
                     // Meat

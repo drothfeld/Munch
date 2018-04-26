@@ -34,6 +34,7 @@ class SingleRecipeViewController: UIViewController {
     
     // Defined Values
     var truncatedUserEmail: String!
+    var foodItems: [FoodItem] = []
     var isDeleteMenuVisible: Bool = false
     var transitionTimer: Timer = Timer()
     var ingredientList: [(name: String, amount: String, inStock: String)] = []
@@ -85,59 +86,88 @@ class SingleRecipeViewController: UIViewController {
                     let rawIngredientsText: String = selectedRecipe.ingredients
                     let splitIngredients = rawIngredientsText.components(separatedBy: ",")
                     
-                    // Main loop to go through each ingredient
-                    for (ingredientIndex, ingredient) in (splitIngredients.enumerated()) {
-                        var ingredientText: String = ingredient
-                        
-                        // Drop the extra space for non-first ingredients
-                        if (ingredientIndex != 0) {
-                            ingredientText = String(ingredient.dropFirst())
+                    // Getting user-food-stock JSON object
+                    let userFoodStockRef = Database.database().reference(withPath: "user-food-stock/" + truncatedUserEmail)
+                    userFoodStockRef.observe(.value, with: { snapshot in
+                        // Parsing JSON data
+                        for item in snapshot.children {
+                            let foodItem = FoodItem(snapshot: item as! DataSnapshot)
+                            self.foodItems.append(foodItem)
                         }
-                        let splitIngredientText = ingredientText.components(separatedBy: ":")
                         
-                        // Creating ingredient row view
-                        let row = UIView(frame: CGRect(x: 0, y: 36*(ingredientIndex + 1), width: 310, height: 30))
-                        row.backgroundColor = UIColor.clear
-                        RecipeIngredientsView.addSubview(row)
+                        // Main loop to go through each ingredient
+                        for (ingredientIndex, ingredient) in (splitIngredients.enumerated()) {
+                            var ingredientText: String = ingredient
                         
-                        // Updating view frame positions
-                        // TODO: Need to fix inconsistant spacing between ingredients view and instructions view
-                        // when ingredients amount varies in size
-                        RecipeIngredientsView.frame = CGRect(x: RecipeIngredientsView.frame.origin.x, y: RecipeIngredientsView.frame.origin.y, width: RecipeIngredientsView.frame.width, height: RecipeIngredientsView.frame.height + 30)
-                        RecipeInstructionsView.frame = CGRect(x: RecipeInstructionsView.frame.origin.x, y: RecipeInstructionsView.frame.origin.y + 30, width: RecipeInstructionsView.frame.width, height: RecipeInstructionsView.frame.height)
-                        RecipeOptionalView.frame = CGRect(x: RecipeOptionalView.frame.origin.x, y: RecipeOptionalView.frame.origin.y + 30, width: RecipeOptionalView.frame.width, height: RecipeOptionalView.frame.height)
-                        RecipeServingsView.frame = CGRect(x: RecipeServingsView.frame.origin.x, y: RecipeServingsView.frame.origin.y + 30, width: RecipeServingsView.frame.width, height: RecipeServingsView.frame.height)
+                            // Drop the extra space for non-first ingredients
+                            if (ingredientIndex != 0) {
+                                ingredientText = String(ingredient.dropFirst())
+                            }
+                            let splitIngredientText = ingredientText.components(separatedBy: ":")
                         
-                        // Going through single ingredients details
-                        for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
+                            // Creating ingredient row view
+                            let row = UIView(frame: CGRect(x: 0, y: 36*(ingredientIndex + 1), width: 310, height: 30))
+                            row.backgroundColor = UIColor.clear
+                            self.RecipeIngredientsView.addSubview(row)
+                        
+                            // Updating view frame positions
+                            // TODO: Need to fix inconsistant spacing between ingredients view and instructions view
+                            // when ingredients amount varies in size
+                            self.RecipeIngredientsView.frame = CGRect(x: self.RecipeIngredientsView.frame.origin.x, y: self.RecipeIngredientsView.frame.origin.y, width: self.RecipeIngredientsView.frame.width, height: self.RecipeIngredientsView.frame.height + 30)
+                            self.RecipeInstructionsView.frame = CGRect(x: self.RecipeInstructionsView.frame.origin.x, y: self.RecipeInstructionsView.frame.origin.y + 30, width: self.RecipeInstructionsView.frame.width, height: self.RecipeInstructionsView.frame.height)
+                            self.RecipeOptionalView.frame = CGRect(x: self.RecipeOptionalView.frame.origin.x, y: self.RecipeOptionalView.frame.origin.y + 30, width: self.RecipeOptionalView.frame.width, height: self.RecipeOptionalView.frame.height)
+                            self.RecipeServingsView.frame = CGRect(x: self.RecipeServingsView.frame.origin.x, y: self.RecipeServingsView.frame.origin.y + 30, width: self.RecipeServingsView.frame.width, height: self.RecipeServingsView.frame.height)
+                        
+                            // Going through single ingredients details
+                            for (ingredientPart, ingredientPartText) in (splitIngredientText.enumerated()) {
                             
-                            // Handle the ingredient name
-                            if (ingredientPart == 0) {
-                                // Creating ingredient name text in row
-                                let ingredientName = UILabel(frame: CGRect(x: 8, y: 0, width: 174, height: 30))
-                                ingredientName.font = UIFont(name: "Lato-Light", size: 15.0)
-                                ingredientName.textColor = UIColor.white
-                                ingredientName.text = ingredientPartText
-                                row.addSubview(ingredientName)
+                                // Handle the ingredient name
+                                if (ingredientPart == 0) {
+                                    // Creating ingredient name text in row
+                                    let ingredientName = UILabel(frame: CGRect(x: 8, y: 0, width: 174, height: 30))
+                                    ingredientName.font = UIFont(name: "Lato-Light", size: 15.0)
+                                    ingredientName.textColor = UIColor.white
+                                    ingredientName.text = ingredientPartText
+                                    row.addSubview(ingredientName)
                                 
-                                // Handle the ingredient inStock icon
-                                // TODO: Need to grab users food-stock from database and check if they have ingredient
-                                let ingredientImage = UIImageView(frame: CGRect(x: 280, y: 0, width: 30, height: 30))
-                                ingredientImage.alpha = 0.8
-                                ingredientImage.image = #imageLiteral(resourceName: "missing-ingredient-icon.png") // PLACEHOLDER
-                                row.addSubview(ingredientImage)
-                            }
-                            // Handle the ingredient amount
-                            else if (ingredientPart == 1) {
-                                // Creating ingredient amount text in row
-                                let ingredientAmount = UILabel(frame: CGRect(x: 190, y: 0, width: 78, height: 30))
-                                ingredientAmount.font = UIFont(name: "Lato-Light", size: 15.0)
-                                ingredientAmount.textColor = UIColor.white
-                                ingredientAmount.text = ingredientPartText
-                                row.addSubview(ingredientAmount)
+                                    // Handle the ingredient inStock icon
+                                    // TODO: Need to grab users food-stock from database and check if they have ingredient
+                                    let ingredientImage = UIImageView(frame: CGRect(x: 280, y: 0, width: 30, height: 30))
+                                    ingredientImage.alpha = 0.8
+                                    var hasIngredient: Bool = false
+                                    for (_, foodItem) in (self.foodItems.enumerated()) {
+                                        // If the user has an ingredient, and it is in stock, show the success icon image
+                                        // TODO: Eventually turn .instock to be an integer that represents how much of a
+                                        // specific food item the user has in stock. Then check that value compared to how
+                                        // much the recipe calls for.
+                                        if (foodItem.name == ingredientPartText) {
+                                            hasIngredient = true
+                                            break
+                                        } else {
+                                            hasIngredient = false
+                                        }
+                                    }
+                                    // Set icon image based on results of scanning the users food stock
+                                    if (hasIngredient) {
+                                        ingredientImage.image = #imageLiteral(resourceName: "new-recipe-success.png")
+                                    } else {
+                                        ingredientImage.image = #imageLiteral(resourceName: "missing-ingredient-icon.png")
+                                    }
+                                
+                                    row.addSubview(ingredientImage)
+                                }
+                                // Handle the ingredient amount
+                                else if (ingredientPart == 1) {
+                                    // Creating ingredient amount text in row
+                                    let ingredientAmount = UILabel(frame: CGRect(x: 190, y: 0, width: 78, height: 30))
+                                    ingredientAmount.font = UIFont(name: "Lato-Light", size: 15.0)
+                                    ingredientAmount.textColor = UIColor.white
+                                    ingredientAmount.text = ingredientPartText
+                                    row.addSubview(ingredientAmount)
+                                }
                             }
                         }
-                    }
+                    })
                 }
             }
         }
