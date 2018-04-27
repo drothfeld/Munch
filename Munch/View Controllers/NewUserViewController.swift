@@ -21,6 +21,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     // Onload
     override func viewDidLoad() {
@@ -36,12 +37,14 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.delegate = self
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
+        confirmPasswordTextField.delegate = self
         // Setting placeholder text for textfields
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         firstNameTextField.attributedPlaceholder = NSAttributedString(string:"First Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         lastNameTextField.attributedPlaceholder = NSAttributedString(string:"Last Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string:"Confirm Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         newUserButton.imageView?.layer.cornerRadius = 10
     }
 
@@ -73,6 +76,12 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
                     self.errorMessageLabel.isHidden = false
                     self.errorMessageLabel.text = "Invalid password"
                     self.invalidLoginCredentials = true
+                }
+                    // Checking that confirm password matches
+                else if (!self.passwordConfirmMatches(password: self.passwordTextField.text!, confirmPassword: self.confirmPasswordTextField.text!)) {
+                        self.errorMessageLabel.isHidden = false
+                        self.errorMessageLabel.text = "Passwords do not match"
+                        self.invalidLoginCredentials = true
                 }
                     // Checking profile
                 else if (!self.isValidProfile(firstname: self.firstNameTextField.text!, lastname: self.lastNameTextField.text!)) {
@@ -137,6 +146,15 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         
         // All conditions must be met
         return (capitalResult && numberResult && specialResult && countResult)
+    }
+    
+    // Checks if the re-entered confirm password matches the original
+    func passwordConfirmMatches(password: String, confirmPassword: String) -> Bool {
+        if (password == confirmPassword) {
+            return true
+        } else {
+            return false
+        }
     }
     
     // Checks if given profile strings are valid

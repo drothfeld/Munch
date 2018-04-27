@@ -378,8 +378,31 @@ Go to your pantry to add some.</string>
                                             </imageView>
                                         </subviews>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSC-8d-1IE" userLabel="CONFIRM Password New Field">
+                                        <rect key="frame" x="0.0" y="145" width="325" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gt3-qE-7y7" userLabel="CONFIRM Password Text Line">
+                                                <rect key="frame" x="7" y="50" width="310" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXp-I9-tVm" userLabel="CONFIRM Password Text Field">
+                                                <rect key="frame" x="33" y="0.0" width="281" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password_login_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="BN3-Rr-W0p" userLabel="CONFIRM Password Icon Image">
+                                                <rect key="frame" x="2" y="10" width="24" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-v8-OFh" userLabel="Firstname New Field">
-                                        <rect key="frame" x="0.0" y="146" width="325" height="45"/>
+                                        <rect key="frame" x="0.0" y="204" width="325" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-AS-nhi" userLabel="Firstname Text Line">
@@ -387,7 +410,7 @@ Go to your pantry to add some.</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-d8-k0M" userLabel="Firstname Text Field">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIrst Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-d8-k0M" userLabel="Firstname Text Field">
                                                 <rect key="frame" x="33" y="0.0" width="281" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -402,7 +425,7 @@ Go to your pantry to add some.</string>
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPN-RX-8dT" userLabel="Lastname New Field">
-                                        <rect key="frame" x="0.0" y="215" width="325" height="45"/>
+                                        <rect key="frame" x="0.0" y="273" width="325" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-CU-FrK" userLabel="Lastname Text Line">
@@ -410,7 +433,7 @@ Go to your pantry to add some.</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rso-Ld-xor" userLabel="Lastname Text Field">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rso-Ld-xor" userLabel="Lastname Text Field">
                                                 <rect key="frame" x="33" y="0.0" width="281" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -477,6 +500,7 @@ Go to your pantry to add some.</string>
                         <viewLayoutGuide key="safeArea" id="ncS-aX-W0k"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="TXp-I9-tVm" id="hFE-dk-GfT"/>
                         <outlet property="errorMessageLabel" destination="agf-3A-ikx" id="n7j-Fr-Zur"/>
                         <outlet property="firstNameTextField" destination="xwY-d8-k0M" id="rrl-hk-Kxr"/>
                         <outlet property="lastNameTextField" destination="rso-Ld-xor" id="n1c-Du-KT8"/>
@@ -1628,7 +1652,7 @@ to delete this recipe?</string>
         <segue reference="A9P-O3-1i4"/>
         <segue reference="V0g-f4-5ry"/>
         <segue reference="v0o-yZ-nhd"/>
-        <segue reference="pHg-9Q-WxV"/>
+        <segue reference="9rk-Tn-J5o"/>
         <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>
 </document>
