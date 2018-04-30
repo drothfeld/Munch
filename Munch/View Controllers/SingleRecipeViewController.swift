@@ -31,6 +31,8 @@ class SingleRecipeViewController: UIViewController {
     @IBOutlet weak var RecipeInstructionsText: UITextView!
     @IBOutlet weak var RecipeServingsView: UIView!
     @IBOutlet weak var RecipeServingsText: UITextView!
+    @IBOutlet weak var RecipeAuthorText: UILabel!
+    @IBOutlet weak var EditRecipeButton: UIButton!
     
     // Defined Values
     var truncatedUserEmail: String!
@@ -71,6 +73,7 @@ class SingleRecipeViewController: UIViewController {
                 RecipeInstructionsText.text = selectedRecipe.instructions
                 RecipeOptionalText.text = selectedRecipe.optional
                 RecipeServingsText.text = selectedRecipe.servingSize
+                RecipeAuthorText.text = selectedRecipe.author
                 
                 // Getting info of the currently logged in user
                 let user = Auth.auth().currentUser
@@ -80,6 +83,7 @@ class SingleRecipeViewController: UIViewController {
                     truncatedUserEmail = stripDotCom(username: user.email!)
                     if (selectedRecipe.author == truncatedUserEmail) {
                         DeleteRecipeButton.isHidden = false
+                        EditRecipeButton.isHidden = false
                     }
                     
                     // Setting up ingredient tuple array
@@ -229,6 +233,11 @@ class SingleRecipeViewController: UIViewController {
         CancelDeleteButton.isHidden = true
         SuccessImage.isHidden = false
         AudioServicesPlaySystemSound(SystemSoundID(1116))
+    }
+    
+    // Allows the creator of a recipe to edit recipe fields
+    @IBAction func editRecipe(_ sender: Any) {
+        // TODO: Need to implement this functionality
     }
     
     // User cancels deleting a recipe

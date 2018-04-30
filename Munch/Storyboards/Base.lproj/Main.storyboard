@@ -1353,6 +1353,16 @@ in this category.</string>
                                             <action selector="deleteRecipeButtonPressed:" destination="3rz-lk-rqR" eventType="touchUpInside" id="at3-Ao-B6M"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjT-Q1-Azb" userLabel="Edit Recipe Button">
+                                        <rect key="frame" x="311" y="13" width="24" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="full-recipe-icon.png">
+                                            <color key="titleColor" red="0.99742268040000004" green="0.99484536079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editRecipe:" destination="3rz-lk-rqR" eventType="touchUpInside" id="Os0-60-s29"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2468546724" green="0.24621680500000001" blue="0.24749253979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -1506,6 +1516,13 @@ in this category.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="recipe_author_username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWa-P9-c4n" userLabel="Author Header Label">
+                                                <rect key="frame" x="17" y="826" width="341" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="12"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="850" id="ZVW-Kb-jrv"/>
@@ -1520,7 +1537,7 @@ in this category.</string>
                                     <constraint firstItem="6AZ-s3-oSh" firstAttribute="leading" secondItem="59r-wT-suX" secondAttribute="leading" id="jcE-26-HKA"/>
                                 </constraints>
                             </scrollView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ub0-ZD-tkl" userLabel="Fade Screen Overlay">
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ub0-ZD-tkl" userLabel="Fade Screen Overlay">
                                 <rect key="frame" x="0.0" y="50" width="375" height="850"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1599,6 +1616,11 @@ to delete this recipe?</string>
                             <constraint firstItem="59r-wT-suX" firstAttribute="leading" secondItem="DeP-Zz-3RJ" secondAttribute="leading" id="tki-0k-7gs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g2O-Co-WEw"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ub0-ZD-tkl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
@@ -1606,8 +1628,10 @@ to delete this recipe?</string>
                         <outlet property="DeleteMenuView" destination="NiM-If-5Sz" id="XSu-N6-1Tv"/>
                         <outlet property="DeleteRecipeButton" destination="3WA-8A-ftE" id="VF6-Og-75q"/>
                         <outlet property="DeleteWarningMessage" destination="4bd-zd-2Ql" id="Iub-GR-JZq"/>
+                        <outlet property="EditRecipeButton" destination="wjT-Q1-Azb" id="BZg-qL-v05"/>
                         <outlet property="FadeScreenOverlay" destination="Ub0-ZD-tkl" id="zgS-Df-eK8"/>
                         <outlet property="MenuBarHeaderText" destination="tnO-n0-ORv" id="9A4-vd-Phr"/>
+                        <outlet property="RecipeAuthorText" destination="MWa-P9-c4n" id="aOs-QT-LDl"/>
                         <outlet property="RecipeCategoryLabel" destination="g8F-86-cyG" id="T12-Tj-tnP"/>
                         <outlet property="RecipeIngredientsView" destination="4B1-zx-mzv" id="uAb-o5-d7C"/>
                         <outlet property="RecipeInstructionsText" destination="GPn-tZ-FJo" id="Ma1-LQ-hIN"/>
@@ -1620,6 +1644,7 @@ to delete this recipe?</string>
                         <outlet property="RecipeWasDeletedMessage" destination="pWh-vE-LUs" id="RbV-E0-kta"/>
                         <outlet property="SuccessImage" destination="zaQ-n3-XlB" id="kOb-3u-CQB"/>
                         <outlet property="YesDeleteButton" destination="SzI-FU-I1g" id="NRP-st-FkQ"/>
+                        <outlet property="editRecipe" destination="wjT-Q1-Azb" id="S3V-e3-M0x"/>
                         <segue destination="p7M-s1-kNP" kind="custom" identifier="backToCategory" customClass="SegueFromLeft" customModule="Munch" customModuleProvider="target" id="A9P-O3-1i4"/>
                     </connections>
                 </viewController>
