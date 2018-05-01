@@ -11,6 +11,6 @@ import FirebaseAuth
 import FirebaseDatabase
 import AVFoundation
 
-class EditRecipeViewController: UIViewController {
+class EditRecipeViewController: UIViewController, UITextFieldDelegate {
 
 }
