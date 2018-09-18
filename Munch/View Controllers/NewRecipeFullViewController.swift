@@ -107,7 +107,7 @@ class NewRecipeFullViewController: UIViewController, UITextFieldDelegate {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
         self.RecipeNameTextField.delegate = self
-        self.RecipeNameTextField.attributedPlaceholder = NSAttributedString(string:"Recipe Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        self.RecipeNameTextField.attributedPlaceholder = NSAttributedString(string:"Recipe Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
     // User presses the create recipe button

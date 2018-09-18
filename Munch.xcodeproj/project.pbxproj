@@ -39,7 +39,6 @@
 		B0580E5F204E0F5F00AF67BD /* username_login_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E5E204E0F5F00AF67BD /* username_login_icon.png */; };
 		B0580E61204E110F00AF67BD /* login_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E60204E110E00AF67BD /* login_button_background.png */; };
 		B0580E63204E143000AF67BD /* login_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0580E62204E143000AF67BD /* login_app_icon.png */; };
-		B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0580E66204E20C200AF67BD /* GoogleService-Info.plist */; };
 		B0580E69204F50C400AF67BD /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0580E68204F50C400AF67BD /* NewUserViewController.swift */; };
 		B06175D6204CEB2A00462CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D5204CEB2A00462CCE /* AppDelegate.swift */; };
 		B06175D8204CEB2A00462CCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06175D7204CEB2A00462CCE /* LoginViewController.swift */; };
@@ -63,9 +62,7 @@
 		B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E3204CF3C000341042 /* Lato-BlackItalic.ttf */; };
 		B0A410F8204CF3C000341042 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E4204CF3C000341042 /* Lato-Semibold.ttf */; };
 		B0A410F9204CF3C000341042 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E5204CF3C000341042 /* Lato-MediumItalic.ttf */; };
-		B0A410FA204CF3C000341042 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E6204CF3C000341042 /* OFL.txt */; };
 		B0A410FB204CF3C000341042 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E7204CF3C000341042 /* Lato-Heavy.ttf */; };
-		B0A410FC204CF3C000341042 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E8204CF3C000341042 /* README.txt */; };
 		B0A410FD204CF3C000341042 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410E9204CF3C000341042 /* Lato-BoldItalic.ttf */; };
 		B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410EA204CF3C000341042 /* Lato-Light.ttf */; };
 		B0A410FF204CF3C000341042 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A410EB204CF3C000341042 /* Lato-Medium.ttf */; };
@@ -80,6 +77,7 @@
 		B0BA0E0E207534AF00F90823 /* servings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0BA0E0C207534AD00F90823 /* servings-icon.png */; };
 		B0BA0E0F207534AF00F90823 /* optional-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0BA0E0D207534AE00F90823 /* optional-icon.png */; };
 		B0BCCDD32098E02F00F4FD09 /* EditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCCDD22098E02F00F4FD09 /* EditRecipeViewController.swift */; };
+		B0C3ADC921517D020018EEE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0580E66204E20C200AF67BD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -396,6 +394,7 @@
 				TargetAttributes = {
 					B06175D1204CEB2A00462CCE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -423,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C3ADC921517D020018EEE6 /* GoogleService-Info.plist in Resources */,
 				B0A410ED204CF3C000341042 /* Lato-HeavyItalic.ttf in Resources */,
 				B0A410FB204CF3C000341042 /* Lato-Heavy.ttf in Resources */,
 				B015A3D8208678C9005E8B1B /* delete-icon.png in Resources */,
@@ -431,7 +431,6 @@
 				B0A410FE204CF3C000341042 /* Lato-Light.ttf in Resources */,
 				B04AAE83208AB97800D243C1 /* missing-ingredient-icon.png in Resources */,
 				B02ACF8F205CA68200D8953B /* back-home-button.png in Resources */,
-				B0580E67204E20C200AF67BD /* GoogleService-Info.plist in Resources */,
 				B0A410F7204CF3C000341042 /* Lato-BlackItalic.ttf in Resources */,
 				B02689A7205861CD0059179A /* sandwhiches-icon.png in Resources */,
 				B0BA0E0B2073DBEA00F90823 /* instructions-icon.png in Resources */,
@@ -463,9 +462,7 @@
 				B02689AD20586CE00059179A /* seafood-icon.png in Resources */,
 				B0BA0E0E207534AF00F90823 /* servings-icon.png in Resources */,
 				B0A410F6204CF3C000341042 /* Lato-Hairline.ttf in Resources */,
-				B0A410FA204CF3C000341042 /* OFL.txt in Resources */,
 				B0272A4C2056EFC7003D662C /* profile-login-icon.png in Resources */,
-				B0A410FC204CF3C000341042 /* README.txt in Resources */,
 				B0A410D6204CF28D00341042 /* login_background.png in Resources */,
 				B02689A8205861CD0059179A /* red-meat-icon.png in Resources */,
 				B0580E5C204E0D2900AF67BD /* password_login_icon.png in Resources */,
@@ -494,7 +491,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -531,6 +528,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -543,6 +541,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -725,7 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = drothfeld.Munch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -741,7 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = drothfeld.Munch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

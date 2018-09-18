@@ -41,13 +41,13 @@ class KitchenViewController: UIViewController, UITableViewDataSource, UITableVie
     // Showing and hiding menu bar when user is/isn't scrolling
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if(velocity.y>0) {
-            UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
+            UIView.animate(withDuration: 0.25, delay: 0, options: UIView.AnimationOptions(), animations: {
                 self.MenuBarView.center = CGPoint(x: 187.5, y: -25.0)
 //                print("Hide")
             }, completion: nil)
             
         } else {
-            UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions(), animations: {
+            UIView.animate(withDuration: 0.25, delay: 0, options: UIView.AnimationOptions(), animations: {
                 self.MenuBarView.center = CGPoint(x: 187.5, y: 25.0)
 //                print("Unhide")
             }, completion: nil)

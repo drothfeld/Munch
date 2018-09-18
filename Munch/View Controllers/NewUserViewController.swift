@@ -40,11 +40,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         confirmPasswordTextField.delegate = self
         // Setting placeholder text for textfields
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_background.png")!)
-        passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        firstNameTextField.attributedPlaceholder = NSAttributedString(string:"First Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        lastNameTextField.attributedPlaceholder = NSAttributedString(string:"Last Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string:"Confirm Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        usernameTextField.attributedPlaceholder = NSAttributedString(string:"Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        firstNameTextField.attributedPlaceholder = NSAttributedString(string:"First Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        lastNameTextField.attributedPlaceholder = NSAttributedString(string:"Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string:"Confirm Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         newUserButton.imageView?.layer.cornerRadius = 10
     }
 

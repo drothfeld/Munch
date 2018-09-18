@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2051,10 +2051,10 @@ Milk: 1/3 Cup</string>
         <image name="username_login_icon.png" width="264" height="265"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M8B-2I-4oE"/>
+        <segue reference="NGx-mZ-WCw"/>
         <segue reference="A9P-O3-1i4"/>
-        <segue reference="V0g-f4-5ry"/>
-        <segue reference="v0o-yZ-nhd"/>
+        <segue reference="4Cs-Zi-oJx"/>
+        <segue reference="3wO-Qo-B5Z"/>
         <segue reference="9rk-Tn-J5o"/>
         <segue reference="ChT-UU-5qp"/>
     </inferredMetricsTieBreakers>

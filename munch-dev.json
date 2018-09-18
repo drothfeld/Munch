@@ -1,0 +1,126 @@
+{
+  "recipes" : {
+    "oat-banana-pancakes" : {
+      "author" : "susankim@gmail",
+      "ingredients" : "Bananas:1, Oats:1/3 Cup, Salt:1/4 Tsp, Baking Powder:1/2 Tsp, Eggs:1",
+      "instructions" : "Mix all ingredients in blender until smooth traditional pancake batter consistency.",
+      "isQuickSnapShot" : "false",
+      "name" : "Oat Banana Pancakes",
+      "optional" : "Flax or shredded wheat cereal can be used with/instead of oats. You can also add a spoonful of peanut butter and dash of cinnamon.",
+      "servingSize" : "5-10 Two inch pancakes.",
+      "type" : "Breakfast"
+    },
+    "rothfeld-caeser-salad-dressing" : {
+      "author" : "dylanrothfeld@gmail",
+      "ingredients" : "Garlic:4-10 Cloves, Salt:1/2 Tsp, Lemon Juice:1/3 Cup, Anchovy Paste:2-3 Inches, Dijon Mustard:1 Tbsp, Worcestershire Sauce:1 Tsp, Extra Virgin Olive Oil:1 Cup",
+      "instructions" : "(1) Blend the garlic and salt until smooth paste.\n(2) Add the lemon juice, anchovy paste, mustard, and Worcestershire sauce and blend until smooth liquid.\n(3) Add olive oil and blend.",
+      "isQuickSnapShot" : "false",
+      "name" : "Rothfeld Caeser Salad Dressing",
+      "optional" : "Can add 1/2 Tsp during step (2) for extra sweetness. Meyer lemons tend to work best, make sure to remove the seeds.",
+      "servingSize" : "Depends on how large of a salad and how heavily dressed you like it!",
+      "type" : "Vegetarian"
+    }
+  },
+  "user-food-stock" : {
+    "dylanrothfeld@gmail" : {
+      "chickenBreasts" : {
+        "inStock" : "True",
+        "name" : "Chicken Breasts",
+        "type" : "Meat"
+      },
+      "clams" : {
+        "inStock" : "True",
+        "name" : "Clams",
+        "type" : "Seafood"
+      },
+      "extraVirginOliveOil" : {
+        "inStock" : "True",
+        "name" : "Extra Virgin Olive Oil",
+        "type" : "Fat"
+      },
+      "garlic" : {
+        "inStock" : "True",
+        "name" : "Garlic",
+        "type" : "Spice"
+      },
+      "milk" : {
+        "inStock" : "True",
+        "name" : "Beef Burger Patties",
+        "type" : "Meat"
+      },
+      "romaineLettuce" : {
+        "inStock" : "True",
+        "name" : "Romaine Lettuce",
+        "type" : "Vegetable"
+      },
+      "salmonFillet" : {
+        "inStock" : "True",
+        "name" : "Salmon Fillet",
+        "type" : "Seafood"
+      },
+      "salt" : {
+        "inStock" : "True",
+        "name" : "Salt",
+        "type" : "Spice"
+      },
+      "slicedTurkey" : {
+        "inStock" : "True",
+        "name" : "Sliced Turkey",
+        "type" : "Meat"
+      }
+    },
+    "test@gmail" : {
+      "beef" : {
+        "inStock" : "True",
+        "name" : "Beef",
+        "type" : "Meat"
+      },
+      "carrots" : {
+        "inStock" : "True",
+        "name" : "Carrots",
+        "type" : "Vegetable"
+      },
+      "chicken" : {
+        "inStock" : "True",
+        "name" : "Chicken",
+        "type" : "Meat"
+      },
+      "milk" : {
+        "inStock" : "True",
+        "name" : "Milk",
+        "type" : "Dairy"
+      },
+      "salmon" : {
+        "inStock" : "True",
+        "name" : "Salmon",
+        "type" : "Seafood"
+      }
+    }
+  },
+  "user-profile" : {
+    "dylanrothfeld@gmail" : {
+      "name" : {
+        "firstname" : "Dylan",
+        "lastname" : "Rothfeld"
+      }
+    },
+    "qwert@big" : {
+      "name" : {
+        "firstname" : "qwer",
+        "lastname" : "qwer"
+      }
+    },
+    "susankim@gmail" : {
+      "name" : {
+        "firstname" : "Susan",
+        "lastname" : "Kim"
+      }
+    },
+    "test@gmail" : {
+      "name" : {
+        "firstname" : "Firstname",
+        "lastname" : "Lastname"
+      }
+    }
+  }
+}
