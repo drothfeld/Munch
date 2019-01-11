@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFEA5E161729DC4BF0591E2C7D824B44"
+               BlueprintIdentifier = "E4119333B8078D0A3CBAC43430699A46"
                BuildableName = "ChartsRealm.framework"
                BlueprintName = "ChartsRealm"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EFEA5E161729DC4BF0591E2C7D824B44"
+            BlueprintIdentifier = "E4119333B8078D0A3CBAC43430699A46"
             BuildableName = "ChartsRealm.framework"
             BlueprintName = "ChartsRealm"
             ReferencedContainer = "container:Pods.xcodeproj">
